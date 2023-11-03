@@ -7,18 +7,9 @@
   <!ELEMENT context(#PCDATA)>
   <!ELEMENT incidentCatagory(#PCDATA)>
   
-  <!ELEMENT dateTime(day, month, year, hour, minute)>
   
-  <!ELEMENT day(#PCDATA)>
-  <!ELEMENT month(#PCDATA)>
-  <!ELEMENT year(#PCDATA)>
-  <!ELEMENT hour(#PCDATA)>
-  <!ELEMENT minute(#PCDATA)>
-  
-  
-  <!ELEMENT encryptionModule(dataToEncrypt+, key>
-  <!ELEMENT dataToEncrypt(#PCDATA).
-  <!ELEMENT key(#PCDATA)>
+  <!ENTITY dateTime SYSTEM "dateTime_class_DTD.dtd">
+  <!ENTITY EncryptionModule "encryption_module.dtd">
   
   
   

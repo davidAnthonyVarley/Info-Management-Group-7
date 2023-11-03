@@ -1,0 +1,12 @@
+<!DOCTYPE PatientStatus [
+  
+  <!ELEMENT patientStatus(unconscious, alive, injuries*, heartRate, bloodPressureSystolic, bloodPressureDiastolic)>
+      <!ELEMENT unconscious(#PCDATA)>
+      <!ELEMENT alive(#PCDATA)>
+      <!ELEMENT injuries(#PCDATA)>
+      
+      <!ELEMENT heartRate(#PCDATA)>
+      <!ELEMENT bloodPressureSystolic(#PCDATA)>
+      <!ELEMENT bloodPressureDiastolic(#PCDATA)>
+  
+]>

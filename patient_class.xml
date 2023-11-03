@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!DOCTYPE Patient SYSTEM "patient_class_DTD.dtd">
+
+
+
+<Patient>
+  <ppsn></ppsn>
+  <gender></gender>
+  <bloodType></bloodType>
+  
+  
+  
+  <patientStatus>
+  </patientStatus>
+  
+  <medicalHistory>
+  </medicalHistory>
+  
+  <hseDatabase>
+    <existingConditions></existingConditions>
+    <healthInsuranceInfo></healthInsuranceInfo>
+    <medicalDirectives></medicalDirectives>
+  </hseDatabase>
+  
+  <date>
+    <day></day>
+    <month></month>
+    <year></year>
+  </date>
+
+</Patient>

@@ -1,0 +1,17 @@
+
+<!DOCTYPE Patient [
+  
+  <!ELEMENT Patient (ppsn, gender, bloodType, patientStatus, medicalHistory, hseDatabase, date)>
+  
+    <!ELEMENT ppsn(#PCDATA)>
+    <!ELEMENT gender(#PCDATA)>
+    <!ELEMENT bloodType(#PCDATA)>
+  
+    <!ENTITY PatientStatus SYSTEM "patient_status_DTD.dtd">
+    <!ENTITY dateTime SYSTEM "dateTime_class_DTD.dtd">  
+    <!-- <!ELEMENT hseDatabase(medicalHistoryOfPatients, encryptionModule)>
+          and med history TBC -->
+      
+  
+  
+]>

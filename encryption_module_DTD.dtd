@@ -1,0 +1,7 @@
+ <!DOCTYPE EncryptionModule [
+   
+  <!ELEMENT EncryptionModule(dataToEncrypt+, key+)>
+    <!ELEMENT dataToEncrypt(#PCDATA).
+    <!ELEMENT key(#PCDATA)>
+     
+ ] >
