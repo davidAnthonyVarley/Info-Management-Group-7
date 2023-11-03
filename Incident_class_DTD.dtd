@@ -1,0 +1,29 @@
+<!DOCTYPE Incident [
+  
+  <!ELEMENT Incident (location, context*, incidentCatagory+, encryptionModule, dateTime)>
+  <!ATTLIST Incident reportToPolice CDATA #IMPLIED>
+  
+  <!ELEMENT location(#PCDATA)>
+  <!ELEMENT context(#PCDATA)>
+  <!ELEMENT incidentCatagory(#PCDATA)>
+  
+  <!ELEMENT dateTime(day, month, year, hour, minute)>
+  
+  <!ELEMENT day(#PCDATA)>
+  <!ELEMENT month(#PCDATA)>
+  <!ELEMENT year(#PCDATA)>
+  <!ELEMENT hour(#PCDATA)>
+  <!ELEMENT minute(#PCDATA)>
+  
+  
+  <!ELEMENT encryptionModule(dataToEncrypt+, key>
+  <!ELEMENT dataToEncrypt(#PCDATA).
+  <!ELEMENT key(#PCDATA)>
+  
+  
+  
+  
+  
+]
+
+>
