@@ -1,0 +1,25 @@
+<!ELEMENT Hospital 
+    (Hospital.hospitalName, Hospital.hospitalLocation, Hospita.avaiability, Hospital.encryptionModule, Hospital.patientChart, Hospital.hospitalDatabase)>
+
+<!ELEMENT Hospital.hospitalName (#PCDATA)>
+
+<!ELEMENT Hospital.hospitalLocation (value+)>
+<!ATTLIST Hospital.hospitalLocation type NMTOKEN #REQUIRED>
+<!ELEMENT value (#PCDATA)>
+<!ATTLIST value name NMTOKEN #REQUIRED>
+
+<!ELEMENT Hospita.avaiability (#PCDATA)>
+<!ATTLIST Hospita.avaiability type NMTOKEN #REQUIRED>
+
+<!ELEMENT Hospital.encryptionModule (EndcryptionModule)>
+<!ELEMENT EndcryptionModule (EncryptionModule.key,EncryptionModule.dataToEncrypt)>
+<!ELEMENT EncryptionModule.key (#PCDATA)>
+<!ATTLIST EncryptionModule.key type NMTOKEN #REQUIRED>
+<!ELEMENT EncryptionModule.dataToEncrypt (#PCDATA)>
+
+<!ELEMENT Hospital.patientChart (PatientChart)>
+<!ELEMENT PatientChart (#PCDATA)>
+
+<!ELEMENT Hospital.hospitalDatabase (patientChart+)>
+<!ATTLIST Hospital.hospitalDatabase type NMTOKEN #REQUIRED>
+<!ELEMENT patientChart (#PCDATA)>
