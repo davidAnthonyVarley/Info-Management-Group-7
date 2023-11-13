@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
-<!DOCTYPE PatientStatuses SYSTEM "patient_statuses_DTD.dtd">
+<!DOCTYPE PatientStatuses SYSTEM "patient_status_DTD.dtd">
 
 <PatientStatuses>
 
-  <PatientStatus alive="yes" unconscious="no">
+  <PatientStatus alive="true" unconscious="false">
 
     <PatientStatus.injuries>Severe fracture to right leg</PatientStatus.injuries>
   
@@ -14,7 +14,7 @@
 
   </PatientStatus>
   
-   <PatientStatus alive="yes" unconscious="yes">
+   <PatientStatus alive="true" unconscious="true">
 
     <PatientStatus.injuries>Burns to face and torso</PatientStatus.injuries>
     <PatientStatus.injuries>Sprained ankle</PatientStatus.injuries>
