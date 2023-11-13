@@ -1,0 +1,10 @@
+<!ELEMENT Notification (message, messageType, status, reporterLocation, reporterName, timeStamp, markAsRead?)>
+
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT messageType (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT reporterLocation (#PCDATA)>
+<!ELEMENT reporterName (#PCDATA)>
+<!ELEMENT timeStamp (#PCDATA)>
+
+<!ELEMENT markAsRead EMPTY>
