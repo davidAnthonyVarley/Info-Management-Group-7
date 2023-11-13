@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!DOCTYPE PatientStatuses SYSTEM "patient_statuses_DTD.dtd">
+
+<PatientStatuses>
+
+  <PatientStatus alive="yes" unconscious="no">
+
+    <PatientStatus.injuries>Severe fracture to right leg</PatientStatus.injuries>
+  
+    <PatientStatus.heartRate>70bpm</PatientStatus.heartRate>
+    <PatientStatus.bloodPressureSystolic>118mm</PatientStatus.bloodPressureSystolic>
+    <PatientStatus.bloodPressureDiastolic>75mm</PatientStatus.bloodPressureDiastolic>
+
+  </PatientStatus>
+  
+   <PatientStatus alive="yes" unconscious="yes">
+
+    <PatientStatus.injuries>Burns to face and torso</PatientStatus.injuries>
+    <PatientStatus.injuries>Sprained ankle</PatientStatus.injuries>
+  
+    <PatientStatus.heartRate>78bpm</PatientStatus.heartRate>
+    <PatientStatus.bloodPressureSystolic>121mm</PatientStatus.bloodPressureSystolic>
+    <PatientStatus.bloodPressureDiastolic>81mm</PatientStatus.bloodPressureDiastolic>
+
+  </PatientStatus>
+  
+
+
+</PatientStatuses>
+
+
+
+
