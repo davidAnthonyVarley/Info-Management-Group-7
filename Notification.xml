@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Notification SYSTEM 'Notification.dtd'>
+<Notification>
+    <Notification.message>Hello, this is a notification.</Notification.message>
+    <Notification.messageType>Information</Notification.messageType>
+    <Notification.status type="boolean">false</Notification.status>
+    <Notification.reporterLocation>123 Main St, City</Notification.reporterLocation>
+    <Notification.reporterName>John Doe</Notification.reporterName>
+    <Notification.timeStamp>2023-11-13T12:00:00</Notification.timeStamp>
+    
+    <Notification.markAsRead/>
+</Notification>
