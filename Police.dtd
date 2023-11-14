@@ -1,7 +1,40 @@
 <!ELEMENT Police (Police.policeStation,Police.policeDatabase,Police.encryptionModule)>
+<!ATTLIST Police id ID #REQUIRED>
 <!ELEMENT Police.policeStation (#PCDATA)>
-<!ENTITY EncryptionModule "EncryptionModule.dtd">
-<!ENTITY Incident "Incident.dtd">
 <!ELEMENT Police.policeDatabase (Incident+)>
 <!ATTLIST Police.policeDatabase type NMTOKEN #REQUIRED>
-<!ELEMENT Police.encryptionModule (EcryptionModule)>
+<!ELEMENT Incident (
+    Incident.category,
+    Incident.location,
+    Incident.date,
+    Incident.timeOfArrival,
+    Incident.context,
+    Incident.encryptionModule  
+  )>
+  <!ATTLIST Incident 
+    id ID #REQUIRED
+    reportToPolice (True | False) "False">
+  <!ELEMENT Incident.category (#PCDATA)>
+  <!ATTLIST Incident.category
+    severity (low | moderate | high | critical) #REQUIRED>
+  <!ELEMENT Incident.location (#PCDATA)>
+  <!ELEMENT Incident.date (#PCDATA)>
+  <!ELEMENT Incident.timeOfArrival (#PCDATA)>
+  <!ELEMENT Incident.context (#PCDATA)>
+  <!ELEMENT Incident.encryptionModule (EncryptionModule)>
+
+
+<!ELEMENT Police.encryptionModule (EncryptionModule)>
+<!ELEMENT EncryptionModule (EncryptionModule.key, EncryptionModule.dataToEncrypt)>
+<!ELEMENT EncryptionModule.key (#PCDATA)>
+<!ELEMENT EncryptionModule.dataToEncrypt (#PCDATA)>
+<!ATTLIST EncryptionModule.key encryptionKey ID #REQUIRED>
+<!ATTLIST EncryptionModule.dataToEncrypt referenceToData IDREF #IMPLIED>
+
+
+  
+ 
+
+<!--<!ENTITY % EncryptionModule SYSTEM "EncryptionModule.dtd">
+<!ENTITY Incident SYSTEM "Incident.dtd">
+%EncryptionModule; -->
