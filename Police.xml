@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Police SYSTEM 'Police.dtd'>
-<Police>
+<Police id="HJ357928">
     <Police.policeStation>Pearse Street Garda Station</Police.policeStation>
     <Police.policeDatabase type="arrayList"> 
-        <Incident>
+        <Incident id = "VF766543" reportToPolice="True">
+            <Incident.category severity ="high"/>
             <Incident.location>53.34271896364257, -6.243167360380834</Incident.location>
-            <Incident.dateTime>16/06/22, 15:38</Incident.dateTime>
+            <Incident.date>16/06/22</Incident.date>
+            <Incident.timeOfArrival>15:38</Incident.timeOfArrival>
             <Incident.context>Man found on the floor with stabbing wounds, second man running away when FR arrived at the scene</Incident.context>
-            <Incident.incidentCategory>Stabbing</Incident.incidentCategory>
             <Incident.encryptionModule>
-                <EcryptionModule>
-                    <EncryptionModule.dataToEncrypt></EncryptionModule.dataToEncrypt>
-                    <EncryptionModule.key>GFSH265763SD</EncryptionModule.key>
-                </EcryptionModule>
+                <EncryptionModule>
+                    <EncryptionModule.key encryptionKey ="DXR895"/>
+                    <EncryptionModule.dataToEncrypt referenceToData = "VF766543"/>
+                </EncryptionModule>
             </Incident.encryptionModule>
-            <Incident.reportToPolice type="boolean">true</Incident.reportToPolice>
         </Incident>
-        <Incident>
-            <Incident.location>53.34987754817347, -6.236829523253724</Incident.location>
-            <Incident.dateTime>05/12/2023, 10:09</Incident.dateTime>
-            <Incident.context>Old woman fell in her bathroom</Incident.context>
-            <Incident.incidentCategory>Home accident</Incident.incidentCategory>
-            <Incident.encryptionModule>
-                <EcryptionModule>
-                    <EncryptionModule.dataToEncrypt></EncryptionModule.dataToEncrypt>
-                    <EncryptionModule.key>573HFJ83767H</EncryptionModule.key>
-                </EcryptionModule>
-            </Incident.encryptionModule>
-            <Incident.reportToPolice type="boolean">false</Incident.reportToPolice>
-        </Incident>
-        <Incident>
+        <Incident id = "RX437529" reportToPolice="True">
+            <Incident.category severity ="critical"/>
             <Incident.location>53.34800212335733, -6.246082940909553</Incident.location>
-            <Incident.dateTime>23/10/2021, 22:21</Incident.dateTime>
+            <Incident.date>23/10/2021</Incident.date>
+            <Incident.timeOfArrival>22:21</Incident.timeOfArrival>
             <Incident.context>Woman trapped in her car after the other driver collided with her car while not having right of way</Incident.context>
-            <Incident.incidentCategory>Car accident</Incident.incidentCategory>
             <Incident.encryptionModule>
-                <EcryptionModule>
-                    <EncryptionModule.dataToEncrypt></EncryptionModule.dataToEncrypt>
-                    <EncryptionModule.key>T2TDG2367WG7</EncryptionModule.key>
-                </EcryptionModule>
+                <EncryptionModule>
+                    <EncryptionModule.key encryptionKey ="CUE674"/>
+                    <EncryptionModule.dataToEncrypt referenceToData = "RX437529"/>
+                </EncryptionModule>
             </Incident.encryptionModule>
-            <Incident.reportToPolice type="boolean">true</Incident.reportToPolice>
+        </Incident>
+        <Incident id = "UF548678" reportToPolice="False">
+            <Incident.category severity ="low"/>
+            <Incident.location>53.34987754817347, -6.236829523253724</Incident.location>
+            <Incident.date>05/12/2023</Incident.date>
+            <Incident.timeOfArrival>10:09</Incident.timeOfArrival>
+            <Incident.context>Old woman fell in her bathroom</Incident.context>
+            <Incident.encryptionModule>
+                <EncryptionModule>
+                    <EncryptionModule.key encryptionKey ="KDT936"/>
+                    <EncryptionModule.dataToEncrypt referenceToData = "UF548678"/>
+                </EncryptionModule>
+            </Incident.encryptionModule>
         </Incident>
     </Police.policeDatabase>
     <Police.encryptionModule>
-        <EcryptionModule>
-            <EncryptionModule.dataToEncrypt></EncryptionModule.dataToEncrypt>
-            <EncryptionModule.key>36HDGS56GD6R</EncryptionModule.key>
-        </EcryptionModule>
+        <EncryptionModule>
+            <EncryptionModule.key encryptionKey ="GFD756"/>
+            <EncryptionModule.dataToEncrypt referenceToData = "HJ357928"/>
+        </EncryptionModule>
     </Police.encryptionModule>
 </Police>
