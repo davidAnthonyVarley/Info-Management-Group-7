@@ -1,0 +1,16 @@
+<!ELEMENT Police (Police.policeStation,Police.policeDatabase,Police.encryptionModule)>
+<!ELEMENT Police.policeStation (#PCDATA)>
+<!ELEMENT Police.policeDatabase (Incident+)>
+<!ATTLIST Police.policeDatabase type NMTOKEN #REQUIRED>
+<!ELEMENT Incident (Incident.location,Incident.dateTime,Incident.context,Incident.incidentCategory,Incident.encryptionModule,Incident.reportToPolice)>
+<!ELEMENT Incident.location (#PCDATA)>
+<!ELEMENT Incident.dateTime (#PCDATA)>
+<!ELEMENT Incident.context (#PCDATA)>
+<!ELEMENT Incident.incidentCategory (#PCDATA)>
+<!ELEMENT Incident.encryptionModule (EcryptionModule)>
+<!ELEMENT EcryptionModule (EncryptionModule.dataToEncrypt,EncryptionModule.key)>
+<!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
+<!ELEMENT EncryptionModule.key (#PCDATA)>
+<!ELEMENT Incident.reportToPolice (#PCDATA)>
+<!ATTLIST Incident.reportToPolice type NMTOKEN #REQUIRED>
+<!ELEMENT Police.encryptionModule (EcryptionModule)>
