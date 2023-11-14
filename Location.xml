@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Locations SYSTEM "Locations.dtd">
+<Locations>
+  <Location id="947201HP">
+    <Location.currentLocation>(52.478253, -6.983627)</Location.currentLocation>
+    <Location.hospitalLocation>(53.453628, -7.376547)</Location.hospitalLocation>
+    <Location.timeUntilDestMins>19</Location.timeUntilDestMins>
+    <Location.distToDestKms>24</Location.distToDestKms>
+    <Location.trafficLevel level="low"/>
+    <Location.Encryptor>
+      <Location.Encryptor.key encryptionKey="XIZ624"/>
+      <Location.Encryptor.dataToEncrypt referenceToData="947201HP"/>
+    </Location.Encryptor>
+  </Location>
+  <Location id="47268AE">
+    <Location.currentLocation>(53.16528, -7.237383)</Location.currentLocation>
+    <Location.hospitalLocation>(53.453628, -7.376547)</Location.hospitalLocation>
+    <Location.timeUntilDestMins>9</Location.timeUntilDestMins>
+    <Location.distToDestKms>10</Location.distToDestKms>
+    <Location.trafficLevel level="average"/>
+    <Location.Encryptor>
+      <Location.Encryptor.key encryptionKey="KDY836"/>
+      <Location.Encryptor.dataToEncrypt referenceToData="47268AE"/>
+    </Location.Encryptor>
+  </Location>
+  <Location id="927456ND">
+    <Location.currentLocation>(53.453628, -7.376547)</Location.currentLocation>
+    <Location.hospitalLocation>(53.453628, -7.376547)</Location.hospitalLocation>
+    <Location.timeUntilDestMins>0</Location.timeUntilDestMins>
+    <Location.distToDestKms>0</Location.distToDestKms>
+    <Location.trafficLevel/>
+    <Location.Encryptor>
+      <Location.Encryptor.key encryptionKey="PDT759"/>
+      <Location.Encryptor.dataToEncrypt referenceToData="927456ND"/>
+    </Location.Encryptor>
+  </Location>
+</Locations>

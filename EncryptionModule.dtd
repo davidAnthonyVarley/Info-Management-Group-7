@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Encryptors [
+  <!ELEMENT Encryptors (Encryptor+)
+	<!ELEMENT Encryptor (Encryptor.key, Encryptor.dataToEncrypt)>
+	<!ATTLIST Encryptor.key 
+		encryptionKey ID #REQUIRED>
+	<!ATTLIST Encryptor.dataToEncrypt
+    referenceToData IDREF #IMPLIED>
+]>

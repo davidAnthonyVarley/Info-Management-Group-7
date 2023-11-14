@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Incidents [
+  <!ENTITY % encryptorParts "Incident.Encryptor.key, Incident.Encryptor.dataToEncrypt">
+  <!ELEMENT Incidents (Incident+)>
+  <!ATTLIST Incident 
+    id ID #REQUIRED
+    reportToPolice (True | False) "False">
+  <!ELEMENT Incident (
+    Incident.category,
+    Incident.location,
+    Incident.date,
+    Incident.timeOfArrival,
+    Incident.context,
+    Incident.Encryptor
+  )>
+  <!ATTLIST Incident.category
+    severity (low | moderate | high | critical) #REQUIRED>
+  <!ELEMENT Incident.location (#PCDATA)>
+  <!ELEMENT Incident.date (#PCDATA)>
+  <!ELEMENT Incident.timeOfArrival (#PCDATA)>
+  <!ELEMENT Incident.context CDATA>
+  <!ELEMENT Incident.Encryptor (%encryptorParts;)>
+	<!ATTLIST Incident.Encryptor.key
+		encryptionKey ID #REQUIRED>
+	<!ATTLIST Incident.Encryptor.dataToEncrypt
+    referenceToData IDREF #IMPLIED>
+]>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Incidents SYSTEM "Incidents.dtd">
+<Incidents>
+  <Incident id="KD738304" reportToPolice="True">
+    <Incident.category severity="moderate"/>
+    <Incident.location>Dublin, Blanchardstown, 76 No Lane</Incident.location>
+    <Incident.date>2023-06-17</Incident.date>
+    <Incident.timeOfArrival>16:37</Incident.timeOfArrival>
+    <Incident.context>.<![CDATA[
+    domestic house fire
+    owner of house burned
+    may have carbon monoxide poisoning
+    suspicion of arson
+    ]]> 
+    </Incident.context>
+    <Incident.Encryptor>
+      <Incident.Encryptor.key encryptionKey="SFH947"/>
+      <Incident.Encryptor.dataToEncrypt referenceToData="KD738304"/>
+    </Incident.Encryptor>
+  </Incident>
+  <Incident id="FJ750684">
+    <Incident.category severity="low"/>
+    <Incident.location>Dublin, City Centre, Pearse Street</Incident.location>
+    <Incident.date>2023-08-21</Incident.date>
+    <Incident.timeOfArrival>21:22</Incident.timeOfArrival>
+    <Incident.context>.<![CDATA[
+    minor traffic accident
+    was an accident 
+    no serious injuries
+    minor injuries need treatment as they may get infected 
+    ]]> 
+    </Incident.context>
+    <Incident.Encryptor>
+      <Incident.Encryptor.key encryptionKey="LDG846"/>
+      <Incident.Encryptor.dataToEncrypt referenceToData="FJ750684"/>
+    </Incident.Encryptor>
+  </Incident>
+  <Incident id="DJ875954" reportToPolice="True">
+    <Incident.category severity="Critical"/>
+    <Incident.location>Cork, Bishopstown</Incident.location>
+    <Incident.date>2023-09-01</Incident.date>
+    <Incident.timeOfArrival>12:07</Incident.timeOfArrival>
+    <Incident.context>.<![CDATA[
+    major flooding throughout town 
+    multiple people injured and in danger
+    police will carry out extraction
+    our patient in critical condition 
+    ]]>
+    </Incident.context>
+    <Incident.Encryptor>
+      <Incident.Encryptor.key encryptionKey="DFS541"/>
+      <Incident.Encryptor.dataToEncrypt referenceToData="DJ875954"/>
+    </Incident.Encryptor>
+  </Incident>
+  <Incident id="JK029375">
+    <Incident.category severity="high"/>
+    <Incident.location>Kerry, Mt.Carrauntoohil</Incident.location>
+    <Incident.date>2023-09-19</Incident.date>
+    <Incident.timeOfArrival>10:18</Incident.timeOfArrival>
+    <Incident.context>.<![CDATA[
+    patient had heart attack
+    in need of aerial retreival 
+    patient in critical conidition 
+    need equipment only found in hospital 
+    ]]>
+    </Incident.context>
+    <Incident.Encryptor>
+      <Incident.Encryptor.key encryptionKey="PDH409"/>
+      <Incident.Encryptor.dataToEncrypt referenceToData="JK029375"/>
+    </Incident.Encryptor>
+  </Incident>
+</Incidents>
