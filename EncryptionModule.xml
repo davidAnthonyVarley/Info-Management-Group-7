@@ -1,12 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE EncryptionModule SYSTEM "EncryptionModule.dtd">
-<Encryptors>
-  <Encryptor>
-    <Encryptor.key encryptionKey="XIZ624"/>
-    <Encryptor.dataToEncrypt/>
-  </Encryptor>
-  <Encryptor>
-    <Encryptor.key encryptionKey="YEK754"/>
-    <Encryptor.dataToEncrypt/>
-  </Encryptor>
-</Encryptors>
+<!ELEMENT EncryptionModule (EncryptionModule.key, EncryptionModule.dataToEncrypt)>
+<!ELEMENT EncryptionModule.key (#PCDATA)>
+<!ELEMENT EncryptionModule.dataToEncrypt (#PCDATA)>
+<!ATTLIST EncryptionModule.key encryptionKey ID #REQUIRED>
+<!ATTLIST EncryptionModule.dataToEncrypt referenceToData IDREF #IMPLIED>
