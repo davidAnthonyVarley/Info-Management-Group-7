@@ -6,13 +6,13 @@
     <Incident.location>53.392143, -6.391097</Incident.location>
     <Incident.date>17/06/2023</Incident.date>
     <Incident.timeOfArrival>16:37</Incident.timeOfArrival>
-    <Incident.context>.<![CDATA[
-    domestic house fire
-    owner of house burned
-    may have carbon monoxide poisoning
-    suspicion of arson
-    ]]> 
+    <Incident.context>
+      domestic house fire
+      owner of house burned
+      may have carbon monoxide poisoning
+      suspicion of arson
     </Incident.context>
+    <Incident.patientID id="CE836"/>
     <Incident.encryptionModule>
       <EncryptionModule>
       <EncryptionModule.key encryptionKey="SFH947"/>
@@ -20,18 +20,19 @@
     </EncryptionModule>
     </Incident.encryptionModule>
   </Incident>
+
   <Incident id="FJ750684">
     <Incident.category severity="low"/>
-    <Incident.location>53.344335, -6.250063</Incident.location>
-    <Incident.date>21/08/2023</Incident.date>
-    <Incident.timeOfArrival>21:22</Incident.timeOfArrival>
-    <Incident.context>.<![CDATA[
-    minor traffic accident
-    was an accident 
-    no serious injuries
-    minor injuries need treatment as they may get infected 
-    ]]> 
+    <Incident.location>53.335789, -6.278512</Incident.location>
+    <Incident.date>15/08/2023</Incident.date>
+    <Incident.timeOfArrival>14:35</Incident.timeOfArrival>
+    <Incident.context>
+      minor traffic accident
+      was an accident 
+      no serious injuries
+      minor injuries need treatment as they may get infected  
     </Incident.context>
+    <Incident.patientID id="NR206"/>
     <Incident.encryptionModule>
       <EncryptionModule>
       <EncryptionModule.key encryptionKey="LDG846"/>
@@ -39,35 +40,39 @@
     </EncryptionModule>
     </Incident.encryptionModule>
   </Incident>
+
   <Incident id="DJ875954" reportToPolice="True">
-    <Incident.category severity="Critical"/>
+    <Incident.category severity="critical"/>
     <Incident.location>51.878748, -8.532065</Incident.location>
     <Incident.date>01/09/2023</Incident.date>
     <Incident.timeOfArrival>12:07</Incident.timeOfArrival>
-    <Incident.context>.<![CDATA[
-    major flooding throughout town 
-    multiple people injured and in danger
-    police will carry out extraction
-    our patient in critical condition 
-    ]]>
+    <Incident.context>
+      major flooding throughout town 
+      multiple people injured and in danger
+      police will carry out extraction
+      our patient in critical condition 
     </Incident.context>
-    <Incident.Encryptor>
-      <Incident.Encryptor.key encryptionKey="DFS541"/>
-      <Incident.Encryptor.dataToEncrypt referenceToData="DJ875954"/>
-    </Incident.Encryptor>
+    <Incident.patientID id="WK385"/>
+    <Incident.encryptionModule>
+      <EncryptionModule>
+      <EncryptionModule.key encryptionKey="DFS541"/>
+      <EncryptionModule.dataToEncrypt referenceToData="DJ875954"/>
+    </EncryptionModule>
+    </Incident.encryptionModule>
+
   </Incident>
   <Incident id="JK029375">
     <Incident.category severity="high"/>
     <Incident.location>51.999666, -9.744167</Incident.location>
     <Incident.date>19/09/2023</Incident.date>
     <Incident.timeOfArrival>10:18</Incident.timeOfArrival>
-    <Incident.context>.<![CDATA[
-    patient had heart attack
-    in need of aerial retreival 
-    patient in critical conidition 
-    need equipment only found in hospital 
-    ]]>
+    <Incident.context>
+      patient had heart attack
+      in need of aerial retreival 
+      patient in critical conidition 
+      need equipment only found in hospital 
     </Incident.context>
+    <Incident.patientID id="BD568"/>
     <Incident.encryptionModule>
       <EncryptionModule>
       <EncryptionModule.key encryptionKey="PDH409"/>
