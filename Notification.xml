@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Notification SYSTEM 'Notification.dtd'>
+<!DOCTYPE Notifications SYSTEM 'Notification.dtd'>
 <Notifications>
     <Notification>
-        <Notification.message> </Notification.message>
-        <Notification.emergencyType> </Notification.messageType>
+        <Notification.message>Allergic Reaction</Notification.message>
+        <Notification.emergencyType code="2D3"/>
         <Notification.reporterLocation>51.999666, -9.744167</Notification.reporterLocation>
         <Notification.reporterName>John Doe</Notification.reporterName>
         <Notification.date>13/11/2023</Notification.date>
-        <Notification.time>12:00<Notification.time>
+        <Notification.time>12:00</Notification.time>
     </Notification>
+
     <Notification>
-        <Notification.message> </Notification.message>
-        <Notification.emergencyType> </Notification.messageType>
-        <Notification.reporterLocation>51.999666, -9.744167</Notification.reporterLocation>
+        <Notification.message>Diabetic person fainted</Notification.message>
+        <Notification.emergencyType code="13D1"/>
+        <Notification.reporterLocation>53.349317, -6.271131</Notification.reporterLocation>
         <Notification.reporterName>Jane Smith</Notification.reporterName>
         <Notification.date>05/02/2023</Notification.date>
-        <Notification.time>22:56<Notification.time>
+        <Notification.time>22:56</Notification.time>
     </Notification>
+
     <Notification>
-         <Notification.message> </Notification.message>
-        <Notification.emergencyType> </Notification.messageType>
-        <Notification.reporterLocation>51.999666, -9.744167</Notification.reporterLocation>
+        <Notification.message>Traffic collision</Notification.message>
+        <Notification.emergencyType code="29B1"/>
+        <Notification.reporterLocation>53.335789, -6.278512</Notification.reporterLocation>
         <Notification.reporterName>Bob Joe</Notification.reporterName>
         <Notification.date>15/08/2023</Notification.date>
-        <Notification.time>14:20<Notification.time>
+        <Notification.time>14:20</Notification.time>
     </Notification>
 </Notifications>
