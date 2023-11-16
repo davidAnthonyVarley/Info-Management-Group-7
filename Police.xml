@@ -29,12 +29,12 @@
                 </EncryptionModule>
             </Incident.encryptionModule>
         </Incident>
-        <Incident id = "UF548678" reportToPolice="False">
-            <Incident.category severity ="low"/>
+        <Incident id = "UF548678" reportToPolice="True">
+            <Incident.category severity ="moderate"/>
             <Incident.location>53.34987754817347, -6.236829523253724</Incident.location>
             <Incident.date>05/12/2023</Incident.date>
             <Incident.timeOfArrival>10:09</Incident.timeOfArrival>
-            <Incident.context>Old woman fell in her bathroom</Incident.context>
+            <Incident.context>Old woman injured after burglary</Incident.context>
             <Incident.encryptionModule>
                 <EncryptionModule>
                     <EncryptionModule.key encryptionKey ="KDT936"/>
