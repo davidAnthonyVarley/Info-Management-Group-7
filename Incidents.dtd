@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Incidents [
-  <!ENTITY % encryptorParts "Incident.Encryptor.key, Incident.Encryptor.dataToEncrypt">
   <!ELEMENT Incidents (Incident+)>
   <!ATTLIST Incident 
     id ID #REQUIRED
@@ -19,9 +18,10 @@
   <!ELEMENT Incident.date (#PCDATA)>
   <!ELEMENT Incident.timeOfArrival (#PCDATA)>
   <!ELEMENT Incident.context CDATA>
-  <!ELEMENT Incident.Encryptor (%encryptorParts;)>
-	<!ATTLIST Incident.Encryptor.key
-		encryptionKey ID #REQUIRED>
-	<!ATTLIST Incident.Encryptor.dataToEncrypt
-    referenceToData IDREF #IMPLIED>
+  <!ELEMENT Incident.encryptionModule (EncryptionModule)>
+  <!ELEMENT EncryptionModule (EncryptionModule.key,EncryptionModule.dataToEncrypt)>
+  <!ELEMENT EncryptionModule.key EMPTY>
+  <!ATTLIST EncryptionModule.key encryptionKey NMTOKEN #REQUIRED>
+  <!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
+  <!ATTLIST EncryptionModule.dataToEncrypt referenceToData NMTOKEN #REQUIRED>
 ]>
