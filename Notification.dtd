@@ -1,11 +1,10 @@
 <!ELEMENT Notifications (Notification+)>
-<!ELEMENT Notification (Notification.message, Notification.messageType, Notification.reporterLocation, Notification.reporterName, Notification.timeStamp, Notification.markAsRead?)>
-<!ATTLIST Notification status (true|false) #REQUIRED>
+<!ELEMENT Notification (Notification.message, Notification.emergencyType, Notification.reporterLocation, Notification.reporterName, Notification.date, Notification.time)>
 
 <!ELEMENT Notification.message (#PCDATA)>
-<!ELEMENT Notification.messageType (#PCDATA)>
+<!ELEMENT Notification.emergencyType EMPTY>
+<!ATTLIST Notification.emergencyType code NMTOKEN #REQUIRED>
 <!ELEMENT Notification.reporterLocation (#PCDATA)>
 <!ELEMENT Notification.reporterName (#PCDATA)>
-<!ELEMENT Notification.timeStamp (#PCDATA)>
-<!ELEMENT Notification.markAsRead EMPTY>
-
+<!ELEMENT Notification.date (#PCDATA)>
+<!ELEMENT Notification.time (#PCDATA)>
