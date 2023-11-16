@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Notification SYSTEM 'Notification.dtd'>
 <Notifications>
-    <Notification status="true">
-        <Notification.message>Hello, this is a notification.</Notification.message>
-        <Notification.messageType>Information</Notification.messageType>
-        <Notification.reporterLocation>123 Main St, City</Notification.reporterLocation>
+    <Notification>
+        <Notification.message> </Notification.message>
+        <Notification.emergencyType> </Notification.messageType>
+        <Notification.reporterLocation>51.999666, -9.744167</Notification.reporterLocation>
         <Notification.reporterName>John Doe</Notification.reporterName>
-        <Notification.timeStamp>2023-11-13T12:00:00</Notification.timeStamp>
-        <Notification.markAsRead/>
+        <Notification.date>13/11/2023</Notification.date>
+        <Notification.time>12:00<Notification.time>
     </Notification>
-
-    <Notification status="false">
-        <Notification.message>Another notification here.</Notification.message>
-        <Notification.messageType>Alert</Notification.messageType>
-        <Notification.reporterLocation>456 Oak St, Town</Notification.reporterLocation>
+    <Notification>
+        <Notification.message> </Notification.message>
+        <Notification.emergencyType> </Notification.messageType>
+        <Notification.reporterLocation>51.999666, -9.744167</Notification.reporterLocation>
         <Notification.reporterName>Jane Smith</Notification.reporterName>
-        <Notification.timeStamp>2023-11-14T15:30:00</Notification.timeStamp>
+        <Notification.date>05/02/2023</Notification.date>
+        <Notification.time>22:56<Notification.time>
     </Notification>
-
-    <Notification status="true">
-        <Notification.message>Yet another notification.</Notification.message>
-        <Notification.messageType>Warning</Notification.messageType>
-        <Notification.reporterLocation>789 Pine St, Village</Notification.reporterLocation>
-        <Notification.reporterName>Bob Johnson</Notification.reporterName>
-        <Notification.timeStamp>2023-11-15T09:45:00</Notification.timeStamp>
+    <Notification>
+         <Notification.message> </Notification.message>
+        <Notification.emergencyType> </Notification.messageType>
+        <Notification.reporterLocation>51.999666, -9.744167</Notification.reporterLocation>
+        <Notification.reporterName>Bob Joe</Notification.reporterName>
+        <Notification.date>15/08/2023</Notification.date>
+        <Notification.time>14:20<Notification.time>
     </Notification>
 </Notifications>
