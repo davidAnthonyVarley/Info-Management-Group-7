@@ -1,5 +1,0 @@
-<!ELEMENT EncryptionModule (EncryptionModule.key, EncryptionModule.dataToEncrypt)>
-<!ELEMENT EncryptionModule.key (#PCDATA)>
-<!ELEMENT EncryptionModule.dataToEncrypt (#PCDATA)>
-<!ATTLIST EncryptionModule.key encryptionKey ID #REQUIRED>
-<!ATTLIST EncryptionModule.dataToEncrypt referenceToData IDREF #IMPLIED>
