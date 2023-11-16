@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Notification SYSTEM 'Notification.dtd'>
-<Notification>
-    <Notification.message>Hello, this is a notification.</Notification.message>
-    <Notification.messageType>Information</Notification.messageType>
-    <Notification.status type="boolean">false</Notification.status>
-    <Notification.reporterLocation>123 Main St, City</Notification.reporterLocation>
-    <Notification.reporterName>John Doe</Notification.reporterName>
-    <Notification.timeStamp>2023-11-13T12:00:00</Notification.timeStamp>
-    
-    <Notification.markAsRead/>
-</Notification>
+<Notifications>
+    <Notification status="true">
+        <Notification.message>Hello, this is a notification.</Notification.message>
+        <Notification.messageType>Information</Notification.messageType>
+        <Notification.reporterLocation>123 Main St, City</Notification.reporterLocation>
+        <Notification.reporterName>John Doe</Notification.reporterName>
+        <Notification.timeStamp>2023-11-13T12:00:00</Notification.timeStamp>
+        <Notification.markAsRead/>
+    </Notification>
+
+    <Notification status="false">
+        <Notification.message>Another notification here.</Notification.message>
+        <Notification.messageType>Alert</Notification.messageType>
+        <Notification.reporterLocation>456 Oak St, Town</Notification.reporterLocation>
+        <Notification.reporterName>Jane Smith</Notification.reporterName>
+        <Notification.timeStamp>2023-11-14T15:30:00</Notification.timeStamp>
+    </Notification>
+
+    <Notification status="true">
+        <Notification.message>Yet another notification.</Notification.message>
+        <Notification.messageType>Warning</Notification.messageType>
+        <Notification.reporterLocation>789 Pine St, Village</Notification.reporterLocation>
+        <Notification.reporterName>Bob Johnson</Notification.reporterName>
+        <Notification.timeStamp>2023-11-15T09:45:00</Notification.timeStamp>
+    </Notification>
+</Notifications>
