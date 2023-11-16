@@ -10,18 +10,25 @@
   Incident.date,
   Incident.timeOfArrival,
   Incident.context,
-  Incident.Encryptor
+  Incident.patientID,
+  Incident.encryptionModule
 )>
+<!ELEMENT Incident.category EMPTY>
 <!ATTLIST Incident.category
   severity (low | moderate | high | critical) #REQUIRED>
 <!ELEMENT Incident.location (#PCDATA)>
 <!ELEMENT Incident.date (#PCDATA)>
 <!ELEMENT Incident.timeOfArrival (#PCDATA)>
-<!ELEMENT Incident.context CDATA>
-<!ELEMENT Incident.encryptionModule (EncryptionModule)>
-<!ELEMENT EncryptionModule (EncryptionModule.key,EncryptionModule.dataToEncrypt)>
-<!ELEMENT EncryptionModule.key EMPTY>
-<!ATTLIST EncryptionModule.key encryptionKey NMTOKEN #REQUIRED>
-<!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
-<!ATTLIST EncryptionModule.dataToEncrypt referenceToData NMTOKEN #REQUIRED>
+<!ELEMENT Incident.context (#PCDATA)>
+<!ELEMENT Incident.patientID EMPTY>
+<!ATTLIST Incident.patientID id NMTOKEN #REQUIRED>
+<!ELEMENT Incident.encryptionModule  (EncryptionModule)>
 
+
+<!ELEMENT EncryptionModule (EncryptionModule.key, EncryptionModule.dataToEncrypt)>
+<!ELEMENT EncryptionModule.key EMPTY>
+<!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
+<!ATTLIST EncryptionModule.key 
+	encryptionKey ID #REQUIRED>
+<!ATTLIST EncryptionModule.dataToEncrypt
+  referenceToData IDREF #IMPLIED>
