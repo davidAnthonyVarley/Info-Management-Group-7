@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Locations [
-  <!ENTITY % encryptorParts "Location.Encryptor.key, Location.Encryptor.dataToEncrypt">
-  <!ELEMENT Locations (Location+)>
-  <!ATTLIST Location 
+
+<!ELEMENT Locations (Location+)>
+<!ATTLIST Location 
     id ID #REQUIRED>
-  <!ELEMENT Location (
-    Location.currentLocation, 
-    Location.hospitalLocation, 
-    Location.timeUntilDestMins,
-    Location.distToDestKms, 
-    Location.trafficLevel,
-    Location.Encryptor
-  )>
-  <!ELEMENT Location.currentLocation (#PCDATA)>
-  <!ELEMENT Location.hospitalLocation (#PCDATA)>
-  <!ELEMENT Location.timeUntilDestMins (#PCDATA)>
-  <!ELEMENT Location.distToDestKms (#PCDATA)>
-  <!ATTLIST Location.trafficLevel
-    level (low | average | high) #IMPLIED>
-  <!ELEMENT Location.Encryptor (%encryptorParts;)>
-	<!ATTLIST Location.Encryptor.key
-		encryptionKey ID #REQUIRED>
-	<!ATTLIST Location.Encryptor.dataToEncrypt
-    referenceToData IDREF #IMPLIED>
-]>
+<!ELEMENT Location (
+  Location.currentLocation, 
+  Location.hospitalLocation, 
+  Location.timeUntilDestMins,
+  Location.distToDestKms, 
+  Location.trafficLevel,
+  EncryptionModule
+)>
+<!ELEMENT Location.currentLocation (#PCDATA)>
+<!ELEMENT Location.hospitalLocation (#PCDATA)>
+<!ELEMENT Location.timeUntilDestMins (#PCDATA)>
+<!ELEMENT Location.distToDestKms (#PCDATA)>
+<!ELEMENT Location.trafficLevel (#PCDATA)>
+<!ATTLIST Location.trafficLevel
+  level (low | average | high) #IMPLIED>
+
+<!ELEMENT EncryptionModule (EncryptionModule.key, EncryptionModule.dataToEncrypt)>
+<!ELEMENT EncryptionModule.key (#PCDATA)>
+<!ELEMENT EncryptionModule.dataToEncrypt (#PCDATA)>
+<!ATTLIST EncryptionModule.key 
+	encryptionKey ID #REQUIRED>
+<!ATTLIST EncryptionModule.dataToEncrypt
+  referenceToData IDREF #IMPLIED>
