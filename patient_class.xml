@@ -2,31 +2,74 @@
 
 <!DOCTYPE Patient SYSTEM "patient_class_DTD.dtd">
 
-
-
 <Patient>
-  <ppsn></ppsn>
-  <gender></gender>
-  <bloodType></bloodType>
-  
-  
-  
-  <patientStatus>
-  </patientStatus>
-  
-  <medicalHistory>
-  </medicalHistory>
-  
-  <hseDatabase>
-    <existingConditions></existingConditions>
-    <healthInsuranceInfo></healthInsuranceInfo>
-    <medicalDirectives></medicalDirectives>
-  </hseDatabase>
-  
-  <date>
-    <day></day>
-    <month></month>
-    <year></year>
-  </date>
-
+   <Patient.MedicalHistory>
+      <MedicalHistory>
+         <MedicalHistory.medicalDirectives type="array">
+            <value name="dnr">True</value>
+            <value name="note">Null</value>
+         </MedicalHistory.medicalDirectives>
+         <MedicalHistory.insuranceContactInfo type="array">
+            <value name="InsuranceProvider">Alliance</value>
+            <value name="InsurancePlanValid">Premium</value>
+         </MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.existingConditions type="array">
+            <value name="Injury">Brain Injury</value>
+            <value name="Injury">Concussion</value>
+         </MedicalHistory.existingConditions>
+      </MedicalHistory>
+   </Patient.MedicalHistory>
+   <Patient.PatientStatus>
+      <PatientStatus alive="true" unconscious="false">
+         <PatientStatus.injuries>Severe fracture to right leg</PatientStatus.injuries>
+         <PatientStatus.heartRate>70bpm</PatientStatus.heartRate>
+         <PatientStatus.bloodPressureSystolic>118mm</PatientStatus.bloodPressureSystolic>
+         <PatientStatus.bloodPressureDiastolic>75mm</PatientStatus.bloodPressureDiastolic>
+      </PatientStatus>
+   </Patient.PatientStatus>
+   <Patient.bloodType>O+</Patient.bloodType>
+   <Patient.dob>
+    <value name="day">13th</value>
+    <value name="month">March</value>
+    <value name="year">1984</value>
+   </Patient.dob>
+   <Patient.gender>female</Patient.gender>
+   <Patient.ppsn>1234uj</Patient.ppsn>
+   <Patient.name>Mary</Patient.name>
+   <Patient.HSEDataBase>
+   <HSEDatabase>
+   <HSEDatabase.medicalHistoryOfPatients type = "array">
+   <medicalHistoryOfPatients.MedicalHistory>
+         <MedicalHistory>
+         <MedicalHistory.medicalDirectives type="array">
+            <value name="dnr">True</value>
+            <value name="note">Null</value>
+         </MedicalHistory.medicalDirectives>
+         <MedicalHistory.insuranceContactInfo type="array">
+            <value name="InsuranceProvider">Alliance</value>
+            <value name="InsurancePlanValid">Premium</value>
+         </MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.existingConditions type="array">
+            <value name="Injury">Brain Injury</value>
+            <value name="Injury">Concussion</value>
+         </MedicalHistory.existingConditions>
+      </MedicalHistory>
+               <MedicalHistory>
+         <MedicalHistory.medicalDirectives type="array">
+            <value name="dnr">False</value>
+            <value name="note">"if lawyer present"</value>
+         </MedicalHistory.medicalDirectives>
+         <MedicalHistory.insuranceContactInfo type="array">
+            <value name="InsuranceProvider">AA Insurance</value>
+            <value name="InsurancePlanValid">Basic</value>
+         </MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.existingConditions type="array">
+            <value name="Injury">Heart attack</value>
+            <value name="Injury">High BP</value>
+         </MedicalHistory.existingConditions>
+      </MedicalHistory>
+      </medicalHistoryOfPatients.MedicalHistory>
+   </HSEDatabase.medicalHistoryOfPatients>
+   </HSEDatabase>
+   </Patient.HSEDataBase>
 </Patient>

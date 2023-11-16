@@ -1,10 +1,11 @@
-<!ELEMENT Notification (message, messageType, status, reporterLocation, reporterName, timeStamp, markAsRead?)>
+<!ELEMENT Notifications (Notification+)>
+<!ELEMENT Notification (Notification.message, Notification.messageType, Notification.reporterLocation, Notification.reporterName, Notification.timeStamp, Notification.markAsRead?)>
+<!ATTLIST Notification status (true|false) #REQUIRED>
 
-<!ELEMENT message (#PCDATA)>
-<!ELEMENT messageType (#PCDATA)>
-<!ELEMENT status (#PCDATA)>
-<!ELEMENT reporterLocation (#PCDATA)>
-<!ELEMENT reporterName (#PCDATA)>
-<!ELEMENT timeStamp (#PCDATA)>
+<!ELEMENT Notification.message (#PCDATA)>
+<!ELEMENT Notification.messageType (#PCDATA)>
+<!ELEMENT Notification.reporterLocation (#PCDATA)>
+<!ELEMENT Notification.reporterName (#PCDATA)>
+<!ELEMENT Notification.timeStamp (#PCDATA)>
+<!ELEMENT Notification.markAsRead EMPTY>
 
-<!ELEMENT markAsRead EMPTY>
