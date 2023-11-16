@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Incidents [
-  <!ELEMENT Incidents (Incident+)>
-  <!ATTLIST Incident 
-    id ID #REQUIRED
-    reportToPolice (True | False) "False">
-  <!ELEMENT Incident (
-    Incident.category,
-    Incident.location,
-    Incident.date,
-    Incident.timeOfArrival,
-    Incident.context,
-    Incident.Encryptor
-  )>
-  <!ATTLIST Incident.category
-    severity (low | moderate | high | critical) #REQUIRED>
-  <!ELEMENT Incident.location (#PCDATA)>
-  <!ELEMENT Incident.date (#PCDATA)>
-  <!ELEMENT Incident.timeOfArrival (#PCDATA)>
-  <!ELEMENT Incident.context CDATA>
-  <!ELEMENT Incident.encryptionModule (EncryptionModule)>
-  <!ELEMENT EncryptionModule (EncryptionModule.key,EncryptionModule.dataToEncrypt)>
-  <!ELEMENT EncryptionModule.key EMPTY>
-  <!ATTLIST EncryptionModule.key encryptionKey NMTOKEN #REQUIRED>
-  <!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
-  <!ATTLIST EncryptionModule.dataToEncrypt referenceToData NMTOKEN #REQUIRED>
-]>
+
+<!ELEMENT Incidents (Incident+)>
+<!ATTLIST Incident 
+  id ID #REQUIRED
+  reportToPolice (True | False) "False">
+<!ELEMENT Incident (
+  Incident.category,
+  Incident.location,
+  Incident.date,
+  Incident.timeOfArrival,
+  Incident.context,
+  Incident.Encryptor
+)>
+<!ATTLIST Incident.category
+  severity (low | moderate | high | critical) #REQUIRED>
+<!ELEMENT Incident.location (#PCDATA)>
+<!ELEMENT Incident.date (#PCDATA)>
+<!ELEMENT Incident.timeOfArrival (#PCDATA)>
+<!ELEMENT Incident.context CDATA>
+<!ELEMENT Incident.encryptionModule (EncryptionModule)>
+<!ELEMENT EncryptionModule (EncryptionModule.key,EncryptionModule.dataToEncrypt)>
+<!ELEMENT EncryptionModule.key EMPTY>
+<!ATTLIST EncryptionModule.key encryptionKey NMTOKEN #REQUIRED>
+<!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
+<!ATTLIST EncryptionModule.dataToEncrypt referenceToData NMTOKEN #REQUIRED>
+
