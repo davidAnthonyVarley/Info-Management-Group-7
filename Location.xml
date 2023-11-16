@@ -1,37 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Locations SYSTEM "Locations.dtd">
 <Locations>
-  <Location id="947201HP">
-    <Location.currentLocation>(52.478253, -6.983627)</Location.currentLocation>
-    <Location.hospitalLocation>(53.453628, -7.376547)</Location.hospitalLocation>
+  <Location id="HP947201">
+    <Location.currentLocation>52.478253,-6.983627</Location.currentLocation>
+    <Location.hospitalLocation>53.453628,-7.376547</Location.hospitalLocation>
     <Location.timeUntilDestMins>19</Location.timeUntilDestMins>
     <Location.distToDestKms>24</Location.distToDestKms>
     <Location.trafficLevel level="low"/>
-    <Location.Encryptor>
-      <Location.Encryptor.key encryptionKey="XIZ624"/>
-      <Location.Encryptor.dataToEncrypt referenceToData="947201HP"/>
-    </Location.Encryptor>
+    <EncryptionModule>
+      <EncryptionModule.key encryptionKey="XIZ624"/>
+      <EncryptionModule.dataToEncrypt referenceToData="HP947201"/>
+    </EncryptionModule>
   </Location>
-  <Location id="47268AE">
-    <Location.currentLocation>(53.16528, -7.237383)</Location.currentLocation>
-    <Location.hospitalLocation>(53.453628, -7.376547)</Location.hospitalLocation>
+  <Location id="AE472682">
+    <Location.currentLocation>53.16528,-7.237383</Location.currentLocation>
+    <Location.hospitalLocation>53.453628,-7.376547</Location.hospitalLocation>
     <Location.timeUntilDestMins>9</Location.timeUntilDestMins>
     <Location.distToDestKms>10</Location.distToDestKms>
     <Location.trafficLevel level="average"/>
-    <Location.Encryptor>
-      <Location.Encryptor.key encryptionKey="KDY836"/>
-      <Location.Encryptor.dataToEncrypt referenceToData="47268AE"/>
-    </Location.Encryptor>
+    <EncryptionModule>
+      <EncryptionModule.key encryptionKey="KDY836"/>
+      <EncryptionModule.dataToEncrypt referenceToData="AE472682"/>
+    </EncryptionModule>
   </Location>
-  <Location id="927456ND">
-    <Location.currentLocation>(53.453628, -7.376547)</Location.currentLocation>
-    <Location.hospitalLocation>(53.453628, -7.376547)</Location.hospitalLocation>
+  <Location id="ND927456">
+    <Location.currentLocation>53.453628,-7.376547</Location.currentLocation>
+    <Location.hospitalLocation>53.453628,-7.376547</Location.hospitalLocation>
     <Location.timeUntilDestMins>0</Location.timeUntilDestMins>
     <Location.distToDestKms>0</Location.distToDestKms>
     <Location.trafficLevel/>
-    <Location.Encryptor>
-      <Location.Encryptor.key encryptionKey="PDT759"/>
-      <Location.Encryptor.dataToEncrypt referenceToData="927456ND"/>
-    </Location.Encryptor>
+    <EncryptionModule>
+      <EncryptionModule.key encryptionKey="PDT759"/>
+      <EncryptionModule.dataToEncrypt referenceToData="ND927456"/>
+    </EncryptionModule>
+  </Location>
+  <Location id="XY123456">
+    <Location.currentLocation>51.123456,-3.789012</Location.currentLocation>
+    <Location.hospitalLocation>51.987654,-4.567890</Location.hospitalLocation>
+    <Location.timeUntilDestMins>15</Location.timeUntilDestMins>
+    <Location.distToDestKms>18</Location.distToDestKms>
+    <Location.trafficLevel level="high"/>
+    <EncryptionModule>
+        <EncryptionModule.key encryptionKey="ABC789"/>
+        <EncryptionModule.dataToEncrypt referenceToData="XY123456"/>
+    </EncryptionModule>
+  </Location>
+  <Location id="AB987654">
+    <Location.currentLocation>40.712776,-74.005974</Location.currentLocation>
+    <Location.hospitalLocation>40.753428,-73.978955</Location.hospitalLocation>
+    <Location.timeUntilDestMins>12</Location.timeUntilDestMins>
+    <Location.distToDestKms>10</Location.distToDestKms>
+    <Location.trafficLevel level="average"/>
+    <EncryptionModule>
+        <EncryptionModule.key encryptionKey="JKL321"/>
+        <EncryptionModule.dataToEncrypt referenceToData="AB987654"/>
+    </EncryptionModule>
+  </Location>
+  <Location id="CD345678">
+    <Location.currentLocation>34.052235,-118.243683</Location.currentLocation>
+    <Location.hospitalLocation>34.052235,-118.243683</Location.hospitalLocation>
+    <Location.timeUntilDestMins>5</Location.timeUntilDestMins>
+    <Location.distToDestKms>3</Location.distToDestKms>
+    <Location.trafficLevel level="low"/>
+    <EncryptionModule>
+        <EncryptionModule.key encryptionKey="MNO987"/>
+        <EncryptionModule.dataToEncrypt referenceToData="CD345678"/>
+    </EncryptionModule>
+  </Location>
+  <Location id="EF123456">
+    <Location.currentLocation>37.774929,-122.419416</Location.currentLocation>
+    <Location.hospitalLocation>37.774929,-122.419416</Location.hospitalLocation>
+    <Location.timeUntilDestMins>8</Location.timeUntilDestMins>
+    <Location.distToDestKms>6</Location.distToDestKms>
+    <Location.trafficLevel level="high"/>
+    <EncryptionModule>
+        <EncryptionModule.key encryptionKey="PQR555"/>
+        <EncryptionModule.dataToEncrypt referenceToData="EF123456"/>
+    </EncryptionModule>
+  </Location>
+  <Location id="GH789012">
+    <Location.currentLocation>41.878113,-87.629799</Location.currentLocation>
+    <Location.hospitalLocation>41.878113,-87.629799</Location.hospitalLocation>
+    <Location.timeUntilDestMins>14</Location.timeUntilDestMins>
+    <Location.distToDestKms>12</Location.distToDestKms>
+    <Location.trafficLevel level="high"/>
+    <EncryptionModule>
+      <EncryptionModule.key encryptionKey="KDY845"/>
+      <EncryptionModule.dataToEncrypt referenceToData="GH789012"/>
+    </EncryptionModule>
   </Location>
 </Locations>
