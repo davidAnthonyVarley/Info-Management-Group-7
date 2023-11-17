@@ -6,13 +6,9 @@
         <Incident id = "VF766543" reportToPolice="True">
             <Incident.category severity ="high"/>
             <Incident.location>53.34271896364257, -6.243167360380834</Incident.location>
-            <Incident.date>16/06/22</Incident.date>
+            <Incident.date>16/06/2022</Incident.date>
             <Incident.timeOfArrival>15:38</Incident.timeOfArrival>
-            <Incident.context>
-                Man found on the floor with stabbing wounds, 
-                second man running away when FR arrived at the scene
-            </Incident.context>
-            <Incident.patientID id="MR035"/>
+            <Incident.context>Man found on the floor with stabbing wounds, second man running away when FR arrived at the scene</Incident.context>
             <Incident.encryptionModule>
                 <EncryptionModule>
                     <EncryptionModule.key encryptionKey ="DXR895"/>
@@ -25,13 +21,7 @@
             <Incident.location>53.34800212335733, -6.246082940909553</Incident.location>
             <Incident.date>23/10/2021</Incident.date>
             <Incident.timeOfArrival>22:21</Incident.timeOfArrival>
-            <Incident.context>
-                Woman trapped in her car
-                the other driver collided with her car
-                the other driver did not have right of way
-                Other driver is injured
-            </Incident.context>
-            <Incident.patientID id="UM346" />
+            <Incident.context>Woman trapped in her car after the other driver collided with her car while not having right of way</Incident.context>
             <Incident.encryptionModule>
                 <EncryptionModule>
                     <EncryptionModule.key encryptionKey ="CUE674"/>
@@ -45,7 +35,6 @@
             <Incident.date>05/12/2023</Incident.date>
             <Incident.timeOfArrival>10:09</Incident.timeOfArrival>
             <Incident.context>Old woman injured after burglary</Incident.context>
-            <Incident.patientID id="EN435" />
             <Incident.encryptionModule>
                 <EncryptionModule>
                     <EncryptionModule.key encryptionKey ="KDT936"/>
