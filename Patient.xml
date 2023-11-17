@@ -1,75 +1,209 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
-<!DOCTYPE Patient SYSTEM "patient_class_DTD.dtd">
+<!DOCTYPE Patient SYSTEM "Patient.dtd">
+
+
+<Patients>
 
 <Patient>
-   <Patient.MedicalHistory>
-      <MedicalHistory>
-         <MedicalHistory.medicalDirectives type="array">
-            <value name="dnr">True</value>
-            <value name="note">Null</value>
-         </MedicalHistory.medicalDirectives>
-         <MedicalHistory.insuranceContactInfo type="array">
-            <value name="InsuranceProvider">Alliance</value>
-            <value name="InsurancePlanValid">Premium</value>
-         </MedicalHistory.insuranceContactInfo>
-         <MedicalHistory.existingConditions type="array">
-            <value name="Injury">Brain Injury</value>
-            <value name="Injury">Concussion</value>
-         </MedicalHistory.existingConditions>
-      </MedicalHistory>
-   </Patient.MedicalHistory>
-   <Patient.PatientStatus>
-      <PatientStatus alive="true" unconscious="false">
-         <PatientStatus.injuries>Severe fracture to right leg</PatientStatus.injuries>
-         <PatientStatus.heartRate>70bpm</PatientStatus.heartRate>
-         <PatientStatus.bloodPressureSystolic>118mm</PatientStatus.bloodPressureSystolic>
-         <PatientStatus.bloodPressureDiastolic>75mm</PatientStatus.bloodPressureDiastolic>
-      </PatientStatus>
-   </Patient.PatientStatus>
+
    <Patient.bloodType>O+</Patient.bloodType>
-   <Patient.dob>
-    <value name="day">13th</value>
-    <value name="month">March</value>
-    <value name="year">1984</value>
-   </Patient.dob>
-   <Patient.gender>female</Patient.gender>
-   <Patient.ppsn>1234uj</Patient.ppsn>
-   <Patient.name>Mary</Patient.name>
+   <Patient.dob>13/03/1984</Patient.dob>
+   <Patient.gender>F</Patient.gender>
+   <Patient.ppsn>1234UJ</Patient.ppsn>
+   <Patient.name>Mary Murphy</Patient.name>
+   
+   <Patient.PatientStatus alive="true" unconscious="false">
+         <PatientStatus.injuries type="array">Severe fracture to right leg</PatientStatus.injuries>
+  
+        <PatientStatus.heartRate>70</PatientStatus.heartRate>
+        <PatientStatus.bloodPressureSystolic>118</PatientStatus.bloodPressureSystolic>
+        <PatientStatus.bloodPressureDiastolic>75</PatientStatus.bloodPressureDiastolic>
+   </Patient.PatientStatus>
+   
+   
    <Patient.HSEDataBase>
-   <HSEDatabase>
+
    <HSEDatabase.medicalHistoryOfPatients type = "array">
    <medicalHistoryOfPatients.MedicalHistory>
-         <MedicalHistory>
+   
+         <MedicalHistory.medicalDirectives type="array" name="dnr">Yes</MedicalHistory.medicalDirectives>
+         <MedicalHistory.medicalDirectives type="array" name="note">Empty</MedicalHistory.medicalDirectives>
+             
+         <MedicalHistory.insuranceContactInfo type="array" name="InsuranceProvider">Alliance</MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.insuranceContactInfo type="array" name="InsurancePlanValid">Premium</MedicalHistory.insuranceContactInfo>
+         
+         <MedicalHistory.existingConditions type="array" name="Injury">Brain Injury</MedicalHistory.existingConditions>
+         <MedicalHistory.existingConditions type="array" name="Injury">Concussion</MedicalHistory.existingConditions>
+    
+         
          <MedicalHistory.medicalDirectives type="array">
-            <value name="dnr">True</value>
-            <value name="note">Null</value>
+            <value name="dnr">No</value>
+            <value name="note">if lawyer present</value>
          </MedicalHistory.medicalDirectives>
-         <MedicalHistory.insuranceContactInfo type="array">
-            <value name="InsuranceProvider">Alliance</value>
-            <value name="InsurancePlanValid">Premium</value>
-         </MedicalHistory.insuranceContactInfo>
-         <MedicalHistory.existingConditions type="array">
-            <value name="Injury">Brain Injury</value>
-            <value name="Injury">Concussion</value>
-         </MedicalHistory.existingConditions>
-      </MedicalHistory>
-               <MedicalHistory>
-         <MedicalHistory.medicalDirectives type="array">
-            <value name="dnr">False</value>
-            <value name="note">"if lawyer present"</value>
-         </MedicalHistory.medicalDirectives>
-         <MedicalHistory.insuranceContactInfo type="array">
-            <value name="InsuranceProvider">AA Insurance</value>
-            <value name="InsurancePlanValid">Basic</value>
-         </MedicalHistory.insuranceContactInfo>
-         <MedicalHistory.existingConditions type="array">
-            <value name="Injury">Heart attack</value>
-            <value name="Injury">High BP</value>
-         </MedicalHistory.existingConditions>
-      </MedicalHistory>
+         <MedicalHistory.insuranceContactInfo type="array" name="InsuranceProvider"> AA Insurance </MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.insuranceContactInfo type="array" name="InsurancePlanValid"> Basic </MedicalHistory.insuranceContactInfo>
+         
+         <MedicalHistory.existingConditions type="array"> Heart attack </MedicalHistory.existingConditions>
+         <MedicalHistory.existingConditions type="array"> High BP </MedicalHistory.existingConditions>
+     
       </medicalHistoryOfPatients.MedicalHistory>
    </HSEDatabase.medicalHistoryOfPatients>
-   </HSEDatabase>
+
    </Patient.HSEDataBase>
+   
+    <Patient.MedicalHistory>
+
+         <MedicalHistory.medicalDirectives type="array" name="dnr">Yes</MedicalHistory.medicalDirectives>
+         <MedicalHistory.medicalDirectives type="array" name="note">Empty</MedicalHistory.medicalDirectives>
+             
+         <MedicalHistory.insuranceContactInfo type="array" name="InsuranceProvider">Alliance</MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.insuranceContactInfo type="array" name="InsurancePlanValid">Premium</MedicalHistory.insuranceContactInfo>
+         
+         <MedicalHistory.existingConditions type="array" name="Injury">Brain Injury</MedicalHistory.existingConditions>
+         <MedicalHistory.existingConditions type="array" name="Injury">Concussion</MedicalHistory.existingConditions>
+         
+   </Patient.MedicalHistory>
+   
 </Patient>
+
+<Patient>
+   <Patient.bloodType>A+</Patient.bloodType>
+   <Patient.dob>02/07/1990</Patient.dob>
+   <Patient.gender>M</Patient.gender>
+   <Patient.ppsn>5678LK</Patient.ppsn>
+   <Patient.name>John Doe</Patient.name>
+   
+   <Patient.PatientStatus alive="true" unconscious="false">
+         <PatientStatus.injuries type="array">Minor cuts and bruises</PatientStatus.injuries>
+  
+        <PatientStatus.heartRate>72</PatientStatus.heartRate>
+        <PatientStatus.bloodPressureSystolic>120</PatientStatus.bloodPressureSystolic>
+        <PatientStatus.bloodPressureDiastolic>80</PatientStatus.bloodPressureDiastolic>
+   </Patient.PatientStatus>
+   
+   <Patient.HSEDataBase>
+   <HSEDatabase.medicalHistoryOfPatients type = "array">
+   <medicalHistoryOfPatients.MedicalHistory>
+   
+         <MedicalHistory.medicalDirectives type="array" name="dnr">No</MedicalHistory.medicalDirectives>
+         <MedicalHistory.medicalDirectives type="array" name="note">Empty</MedicalHistory.medicalDirectives>
+             
+         <MedicalHistory.insuranceContactInfo type="array" name="InsuranceProvider">Alliance</MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.insuranceContactInfo type="array" name="InsurancePlanValid">Premium</MedicalHistory.insuranceContactInfo>
+         
+         <MedicalHistory.existingConditions type="array" name="Injury">None</MedicalHistory.existingConditions>
+    
+      </medicalHistoryOfPatients.MedicalHistory>
+   </HSEDatabase.medicalHistoryOfPatients>
+   </Patient.HSEDataBase>
+   
+    <Patient.MedicalHistory>
+
+         <MedicalHistory.medicalDirectives type="array" name="dnr">No</MedicalHistory.medicalDirectives>
+         <MedicalHistory.medicalDirectives type="array" name="note">Empty</MedicalHistory.medicalDirectives>
+             
+         <MedicalHistory.insuranceContactInfo type="array" name="InsuranceProvider">Trinners For Winners United</MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.insuranceContactInfo type="array" name="InsurancePlanValid">Premium</MedicalHistory.insuranceContactInfo>
+         
+         <MedicalHistory.existingConditions type="array" name="Injury">None</MedicalHistory.existingConditions>
+         
+   </Patient.MedicalHistory>
+   
+</Patient>
+
+<Patient>
+   <Patient.bloodType>B-</Patient.bloodType>
+   <Patient.dob>15/11/1975</Patient.dob>
+   <Patient.gender>F</Patient.gender>
+   <Patient.ppsn>9101MN</Patient.ppsn>
+   <Patient.name>Jane Smith</Patient.name>
+   
+   <Patient.PatientStatus alive="true" unconscious="true">
+         <PatientStatus.injuries type="array">Severe head trauma</PatientStatus.injuries>
+  
+        <PatientStatus.heartRate>60</PatientStatus.heartRate>
+        <PatientStatus.bloodPressureSystolic>110</PatientStatus.bloodPressureSystolic>
+        <PatientStatus.bloodPressureDiastolic>70</PatientStatus.bloodPressureDiastolic>
+   </Patient.PatientStatus>
+   
+   <Patient.HSEDataBase>
+   <HSEDatabase.medicalHistoryOfPatients type = "array">
+   <medicalHistoryOfPatients.MedicalHistory>
+   
+         <MedicalHistory.medicalDirectives type="array" name="dnr">Yes</MedicalHistory.medicalDirectives>
+         <MedicalHistory.medicalDirectives type="array" name="note">Empty</MedicalHistory.medicalDirectives>
+             
+         <MedicalHistory.insuranceContactInfo type="array" name="InsuranceProvider">Alliance</MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.insuranceContactInfo type="array" name="InsurancePlanValid">Premium</MedicalHistory.insuranceContactInfo>
+         
+         <MedicalHistory.existingConditions type="array" name="Injury">Brain Injury</MedicalHistory.existingConditions>
+    
+      </medicalHistoryOfPatients.MedicalHistory>
+   </HSEDatabase.medicalHistoryOfPatients>
+   </Patient.HSEDataBase>
+   
+    <Patient.MedicalHistory>
+
+         <MedicalHistory.medicalDirectives type="array" name="dnr">Yes</MedicalHistory.medicalDirectives>
+         <MedicalHistory.medicalDirectives type="array" name="note">Empty</MedicalHistory.medicalDirectives>
+             
+         <MedicalHistory.insuranceContactInfo type="array" name="InsuranceProvider">Alliance</MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.insuranceContactInfo type="array" name="InsurancePlanValid">Premium</MedicalHistory.insuranceContactInfo>
+         
+         <MedicalHistory.existingConditions type="array" name="Injury">Brain Injury</MedicalHistory.existingConditions>
+         
+   </Patient.MedicalHistory>
+   
+</Patient>
+
+<Patient>
+   <Patient.bloodType>AB+</Patient.bloodType>
+   <Patient.dob>30/06/2000</Patient.dob>
+   <Patient.gender>M</Patient.gender>
+   <Patient.ppsn>1213OP</Patient.ppsn>
+   <Patient.name>Tom Brown</Patient.name>
+   
+   <Patient.PatientStatus alive="true" unconscious="false">
+         <PatientStatus.injuries type="array">Minor cuts and bruises</PatientStatus.injuries>
+  
+        <PatientStatus.heartRate>72</PatientStatus.heartRate>
+        <PatientStatus.bloodPressureSystolic>120</PatientStatus.bloodPressureSystolic>
+        <PatientStatus.bloodPressureDiastolic>80</PatientStatus.bloodPressureDiastolic>
+   </Patient.PatientStatus>
+   
+   <Patient.HSEDataBase>
+   <HSEDatabase.medicalHistoryOfPatients type = "array">
+   <medicalHistoryOfPatients.MedicalHistory>
+   
+         <MedicalHistory.medicalDirectives type="array" name="dnr">No</MedicalHistory.medicalDirectives>
+         <MedicalHistory.medicalDirectives type="array" name="note">Empty</MedicalHistory.medicalDirectives>
+             
+         <MedicalHistory.insuranceContactInfo type="array" name="InsuranceProvider">Alliance</MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.insuranceContactInfo type="array" name="InsurancePlanValid">Premium</MedicalHistory.insuranceContactInfo>
+         
+         <MedicalHistory.existingConditions type="array" name="Injury">None</MedicalHistory.existingConditions>
+    
+      </medicalHistoryOfPatients.MedicalHistory>
+   </HSEDatabase.medicalHistoryOfPatients>
+   </Patient.HSEDataBase>
+   
+    <Patient.MedicalHistory>
+
+         <MedicalHistory.medicalDirectives type="array" name="dnr">No</MedicalHistory.medicalDirectives>
+         <MedicalHistory.medicalDirectives type="array" name="note">Empty</MedicalHistory.medicalDirectives>
+             
+         <MedicalHistory.insuranceContactInfo type="array" name="InsuranceProvider">Alliance</MedicalHistory.insuranceContactInfo>
+         <MedicalHistory.insuranceContactInfo type="array" name="InsurancePlanValid">Premium</MedicalHistory.insuranceContactInfo>
+         
+         <MedicalHistory.existingConditions type="array" name="Injury">None</MedicalHistory.existingConditions>
+         
+   </Patient.MedicalHistory>
+   
+</Patient>
+
+</Patients>
+
+
+
+

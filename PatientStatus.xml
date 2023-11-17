@@ -6,23 +6,40 @@
 
   <PatientStatus alive="true" unconscious="false">
 
-    <PatientStatus.injuries>Severe fracture to right leg</PatientStatus.injuries>
+    <PatientStatus.injuries type="array">Severe fracture to right leg</PatientStatus.injuries>
   
-    <PatientStatus.heartRate>70bpm</PatientStatus.heartRate>
-    <PatientStatus.bloodPressureSystolic>118mm</PatientStatus.bloodPressureSystolic>
-    <PatientStatus.bloodPressureDiastolic>75mm</PatientStatus.bloodPressureDiastolic>
+    <PatientStatus.heartRate>70</PatientStatus.heartRate>
+    <PatientStatus.bloodPressureSystolic>118</PatientStatus.bloodPressureSystolic>
+    <PatientStatus.bloodPressureDiastolic>75</PatientStatus.bloodPressureDiastolic>
 
   </PatientStatus>
   
    <PatientStatus alive="true" unconscious="true">
 
-    <PatientStatus.injuries>Burns to face and torso</PatientStatus.injuries>
-    <PatientStatus.injuries>Sprained ankle</PatientStatus.injuries>
+    <PatientStatus.injuries type="array">Burns to face and torso</PatientStatus.injuries>
+    <PatientStatus.injuries type="array">Sprained ankle</PatientStatus.injuries>
   
-    <PatientStatus.heartRate>78bpm</PatientStatus.heartRate>
-    <PatientStatus.bloodPressureSystolic>121mm</PatientStatus.bloodPressureSystolic>
-    <PatientStatus.bloodPressureDiastolic>81mm</PatientStatus.bloodPressureDiastolic>
+    <PatientStatus.heartRate>78</PatientStatus.heartRate>
+    <PatientStatus.bloodPressureSystolic>121</PatientStatus.bloodPressureSystolic>
+    <PatientStatus.bloodPressureDiastolic>81</PatientStatus.bloodPressureDiastolic>
 
+  </PatientStatus>
+  
+  <PatientStatus alive="false" unconscious="true">
+    <PatientStatus.injuries type="array">Severe head trauma</PatientStatus.injuries>
+    <PatientStatus.injuries type="array">Fractured ribs</PatientStatus.injuries>
+    
+    <PatientStatus.heartRate>0</PatientStatus.heartRate>
+    <PatientStatus.bloodPressureSystolic>0</PatientStatus.bloodPressureSystolic>
+    <PatientStatus.bloodPressureDiastolic>0</PatientStatus.bloodPressureDiastolic>
+  </PatientStatus>
+
+  <PatientStatus alive="true" unconscious="false">
+    <PatientStatus.injuries type="array">Minor cuts and bruises</PatientStatus.injuries>
+    
+    <PatientStatus.heartRate>72</PatientStatus.heartRate>
+    <PatientStatus.bloodPressureSystolic>120</PatientStatus.bloodPressureSystolic>
+    <PatientStatus.bloodPressureDiastolic>80</PatientStatus.bloodPressureDiastolic>
   </PatientStatus>
   
 

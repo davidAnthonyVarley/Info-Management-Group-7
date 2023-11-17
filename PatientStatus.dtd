@@ -1,29 +1,13 @@
-<!ELEMENT Patient (Patient.MedicalHistory,Patient.PatientStatus,Patient.bloodType,Patient.dob,Patient.gender,Patient.ppsn,Patient.name,Patient.HSEDataBase)>
-<!ELEMENT Patient.MedicalHistory (MedicalHistory)>
-<!ELEMENT MedicalHistory (MedicalHistory.medicalDirectives,MedicalHistory.insuranceContactInfo,MedicalHistory.existingConditions)>
-<!ELEMENT MedicalHistory.medicalDirectives (value+)>
-<!ATTLIST MedicalHistory.medicalDirectives type NMTOKEN #REQUIRED>
-<!ELEMENT value (#PCDATA)>
-<!ATTLIST value name NMTOKEN #REQUIRED>
-<!ELEMENT MedicalHistory.insuranceContactInfo (value+)>
-<!ATTLIST MedicalHistory.insuranceContactInfo type NMTOKEN #REQUIRED>
-<!ELEMENT MedicalHistory.existingConditions (value+)>
-<!ATTLIST MedicalHistory.existingConditions type NMTOKEN #REQUIRED>
-<!ELEMENT Patient.PatientStatus (PatientStatus)>
-<!ELEMENT PatientStatus (PatientStatus.injuries,PatientStatus.heartRate,PatientStatus.bloodPressureSystolic,PatientStatus.bloodPressureDiastolic)>
-<!ATTLIST PatientStatus alive NMTOKEN #REQUIRED>
-<!ATTLIST PatientStatus unconscious NMTOKEN #REQUIRED>
-<!ELEMENT PatientStatus.injuries (#PCDATA)>
-<!ELEMENT PatientStatus.heartRate (#PCDATA)>
-<!ELEMENT PatientStatus.bloodPressureSystolic (#PCDATA)>
-<!ELEMENT PatientStatus.bloodPressureDiastolic (#PCDATA)>
-<!ELEMENT Patient.bloodType (#PCDATA)>
-<!ELEMENT Patient.dob (value+)>
-<!ELEMENT Patient.gender (#PCDATA)>
-<!ELEMENT Patient.ppsn (#PCDATA)>
-<!ELEMENT Patient.name (#PCDATA)>
-<!ELEMENT Patient.HSEDataBase (HSEDatabase)>
-<!ELEMENT HSEDatabase (HSEDatabase.medicalHistoryOfPatients)>
-<!ELEMENT HSEDatabase.medicalHistoryOfPatients (medicalHistoryOfPatients.MedicalHistory)>
-<!ATTLIST HSEDatabase.medicalHistoryOfPatients type NMTOKEN #REQUIRED>
-<!ELEMENT medicalHistoryOfPatients.MedicalHistory (MedicalHistory+)>
+<!DOCTYPE PatientStatus [
+  
+  <!ELEMENT patientStatus(unconscious, alive, injuries*, heartRate, bloodPressureSystolic, bloodPressureDiastolic)>
+      <!ELEMENT unconscious(#PCDATA)>
+      <!ELEMENT alive(#PCDATA)>
+      <!ELEMENT injuries(#PCDATA)>
+      <!ATTLIST injuries type CDATA #REQUIRED>
+      
+      <!ELEMENT heartRate(#PCDATA)>
+      <!ELEMENT bloodPressureSystolic(#PCDATA)>
+      <!ELEMENT bloodPressureDiastolic(#PCDATA)>
+  
+]>
