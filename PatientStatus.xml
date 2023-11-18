@@ -1,51 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
-<!DOCTYPE PatientStatuses SYSTEM "patient_status_DTD.dtd">
+<!DOCTYPE PatientStatuses SYSTEM "PatientStatus.dtd">
 
 <PatientStatuses>
 
-  <PatientStatus alive="true" unconscious="false">
-
-    <PatientStatus.injuries type="array">Severe fracture to right leg</PatientStatus.injuries>
-  
-    <PatientStatus.heartRate>70</PatientStatus.heartRate>
-    <PatientStatus.bloodPressureSystolic>118</PatientStatus.bloodPressureSystolic>
-    <PatientStatus.bloodPressureDiastolic>75</PatientStatus.bloodPressureDiastolic>
-
-  </PatientStatus>
-  
-   <PatientStatus alive="true" unconscious="true">
-
-    <PatientStatus.injuries type="array">Burns to face and torso</PatientStatus.injuries>
-    <PatientStatus.injuries type="array">Sprained ankle</PatientStatus.injuries>
-  
-    <PatientStatus.heartRate>78</PatientStatus.heartRate>
-    <PatientStatus.bloodPressureSystolic>121</PatientStatus.bloodPressureSystolic>
-    <PatientStatus.bloodPressureDiastolic>81</PatientStatus.bloodPressureDiastolic>
-
-  </PatientStatus>
-  
-  <PatientStatus alive="false" unconscious="true">
-    <PatientStatus.injuries type="array">Severe head trauma</PatientStatus.injuries>
-    <PatientStatus.injuries type="array">Fractured ribs</PatientStatus.injuries>
+    <PatientStatus alive="true" unconscious="false">
+        <PatientStatus.patient id = "WK385"></PatientStatus.patient>
+        <PatientStatus.injuries>
+            <data>Severe fracture to right leg</data>
+            <data>Bruising on torso</data>
+        </PatientStatus.injuries>
+        <PatientStatus.heartRate bpm = "70"/>
+        <PatientStatus.bloodPressureSystolic mmHg = "118"/>
+        <PatientStatus.bloodPressureDiastolic mmHg = "75"/>
+        <PatientStatus.arrivedAtHospital arrived = "no"/>
+    </PatientStatus>
     
-    <PatientStatus.heartRate>0</PatientStatus.heartRate>
-    <PatientStatus.bloodPressureSystolic>0</PatientStatus.bloodPressureSystolic>
-    <PatientStatus.bloodPressureDiastolic>0</PatientStatus.bloodPressureDiastolic>
-  </PatientStatus>
-
-  <PatientStatus alive="true" unconscious="false">
-    <PatientStatus.injuries type="array">Minor cuts and bruises</PatientStatus.injuries>
+    <PatientStatus alive="true" unconscious="false">
+        <PatientStatus.patient id="WK001"></PatientStatus.patient>
+        <PatientStatus.injuries>
+            <data>Compound fracture in left arm</data>
+            <data>Facial lacerations</data>
+        </PatientStatus.injuries>
+        <PatientStatus.heartRate bpm="65"/>
+        <PatientStatus.bloodPressureSystolic mmHg="120"/>
+        <PatientStatus.bloodPressureDiastolic mmHg="80"/>
+        <PatientStatus.arrivedAtHospital arrived = "no"/>
+    </PatientStatus>
     
-    <PatientStatus.heartRate>72</PatientStatus.heartRate>
-    <PatientStatus.bloodPressureSystolic>120</PatientStatus.bloodPressureSystolic>
-    <PatientStatus.bloodPressureDiastolic>80</PatientStatus.bloodPressureDiastolic>
-  </PatientStatus>
-  
+    <PatientStatus alive="true" unconscious="false">
+        <PatientStatus.patient id="CE836"></PatientStatus.patient>
+        <PatientStatus.injuries>
+            <data>Smoke inhalation</data>
+            <data>Second-degree burns on hands</data>
+        </PatientStatus.injuries>
+        <PatientStatus.heartRate bpm="90"/>
+        <PatientStatus.bloodPressureSystolic mmHg="110"/>
+        <PatientStatus.bloodPressureDiastolic mmHg="70"/>
+        <PatientStatus.arrivedAtHospital arrived = "yes"/>
+    </PatientStatus>
 
+    <PatientStatus alive="true" unconscious="false">
+        <PatientStatus.patient id="WK003"></PatientStatus.patient>
+        <PatientStatus.injuries>
+            <data>Spinal injury</data>
+            <data>Broken collarbone</data>
+        </PatientStatus.injuries>
+        <PatientStatus.heartRate bpm="75"/>
+        <PatientStatus.bloodPressureSystolic mmHg="130"/>
+        <PatientStatus.bloodPressureDiastolic mmHg="85"/>
+        <PatientStatus.arrivedAtHospital arrived = "no"/>
+    </PatientStatus>
 
+    <PatientStatus alive="true" unconscious="false">
+        <PatientStatus.patient id="WK004"></PatientStatus.patient>
+        <PatientStatus.injuries>
+            <data>Allergic reaction</data>
+            <data>Dislocated shoulder</data>
+        </PatientStatus.injuries>
+        <PatientStatus.heartRate bpm="80"/>
+        <PatientStatus.bloodPressureSystolic mmHg="115"/>
+        <PatientStatus.bloodPressureDiastolic mmHg="75"/>
+        <PatientStatus.arrivedAtHospital arrived = "yes"/>
+    </PatientStatus>
+     
 </PatientStatuses>
-
-
-
-
