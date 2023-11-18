@@ -1,13 +1,22 @@
-<!DOCTYPE PatientStatus [
-  
-  <!ELEMENT patientStatus(unconscious, alive, injuries*, heartRate, bloodPressureSystolic, bloodPressureDiastolic)>
-      <!ELEMENT unconscious(#PCDATA)>
-      <!ELEMENT alive(#PCDATA)>
-      <!ELEMENT injuries(#PCDATA)>
-      <!ATTLIST injuries type CDATA #REQUIRED>
-      
-      <!ELEMENT heartRate(#PCDATA)>
-      <!ELEMENT bloodPressureSystolic(#PCDATA)>
-      <!ELEMENT bloodPressureDiastolic(#PCDATA)>
-  
-]>
+<!ELEMENT PatientStatuses (PatientStatus+)>
+<!ELEMENT PatientStatus 
+    (PatientStatus.patient,
+    PatientStatus.injuries,
+    PatientStatus.heartRate,
+    PatientStatus.bloodPressureSystolic,
+    PatientStatus.bloodPressureDiastolic,
+    PatientStatus.arrivedAtHospital)>
+<!ATTLIST PatientStatus alive (true | false) #IMPLIED>
+<!ATTLIST PatientStatus unconscious (true | false) #REQUIRED>
+<!ELEMENT PatientStatus.patient EMPTY>
+<!ATTLIST PatientStatus.patient id ID #REQUIRED>
+<!ELEMENT PatientStatus.injuries (data+)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT PatientStatus.heartRate EMPTY>
+<!ATTLIST PatientStatus.heartRate bpm NMTOKEN #REQUIRED>
+<!ELEMENT PatientStatus.bloodPressureSystolic EMPTY>
+<!ATTLIST PatientStatus.bloodPressureSystolic mmHg NMTOKEN #REQUIRED>
+<!ELEMENT PatientStatus.bloodPressureDiastolic EMPTY>
+<!ATTLIST PatientStatus.bloodPressureDiastolic mmHg NMTOKEN #REQUIRED>
+<!ELEMENT PatientStatus.arrivedAtHospital EMPTY>
+<!ATTLIST PatientStatus.arrivedAtHospital arrived (yes | no) #REQUIRED>
