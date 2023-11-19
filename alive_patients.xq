@@ -1,28 +1,13 @@
-(: method 2, get all alive patients and their name + injuries:)
-
+(:get all alive patients and their name + injuries:)
 
 declare function local:get_patient_injuries($pat as element(Patient)) {
- 
-  <Patient>
-  {string($pat/name)}
-  for $inj in $pat/Patient.PatientStatus//PatientStatus.injuries
+  let $patientName := $pat/Patient.name/text()
+  for $inj in $pat/Patient.PatientStatus/PatientStatus/PatientStatus.injuries
   return 
-  $inj
-  </Patient>
-  
-};
-
-<alive_patients>
-{
+  concat("Patient Name: ", $patientName, ", Injuries: ", string-join($inj, ", "))
+}; 
 
 for $p in doc("Patient.xml")/Patients/Patient
-
-where ($p/Patient.PatientStatus[@alive="true"])
+where ($p/Patient.PatientStatus/PatientStatus[@alive="true"])
 return 
-
-
-  <name>  {$p/Patient.name/string()} </name>
-}
-</alive_patients>
-
-
+  local:get_patient_injuries($p)
