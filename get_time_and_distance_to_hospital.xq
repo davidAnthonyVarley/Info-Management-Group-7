@@ -1,19 +1,27 @@
-(: xQuery not finished, template :)
+(:given coordinates, it returns the km to the hospital, how long it will take and the traffic level :)
 
-declare function local:get_time_until_dest_mins($locations as element(Locations)) {
 
-    for $time in doc("Locations.xml")/Locations/location
-    return $time/timeUntilDestMins
-}
+declare function local:getLocationInfo($locations as element(Locations), $currentLocation as xs:string) as xs:string {
+ let $location := $locations/Location[Location.currentLocation/text() = $currentLocation]
+  return
+    if (empty($location)) then
+      "Location not found."
+    else
+  let $timeUntilDestMins := $location/Location.timeUntilDestMins/text()
+  let $distToDestKms := $location/Location.distToDestKms/text()
+  let $trafficLevel := $location/Location.trafficLevel/@level
 
-declare function local:get_dist_to_dest_kms($locations as element(Locations)) {
+  return
+    concat(
+      "Distance to Hospital: ", $distToDestKms, " km",
+      ", Time until Destination: ", $timeUntilDestMins, " mins",
+      ", Traffic Level: ", $trafficLevel
+    )
+};
 
-    for $distance in doc("Locations.xml")/Locations/location
-    return $distance/distToDestKms
-}
+let $currentLocation := "53.16528,-7.237383" (: Replace with the actual current location :)
 
-declare function local:get_traffic_level($locations as element(Locations)){
+for $locations in doc("Locations.xml")/Locations
+return
+  local:getLocationInfo($locations, $currentLocation)
 
-    for $traffic in doc("Locations.xml")/Locations/location
-    return $traffic/trafficLevel
-}
