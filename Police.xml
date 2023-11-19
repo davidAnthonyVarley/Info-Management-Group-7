@@ -9,6 +9,7 @@
             <Incident.date>16/06/2022</Incident.date>
             <Incident.timeOfArrival>15:38</Incident.timeOfArrival>
             <Incident.context>Man found on the floor with stabbing wounds, second man running away when FR arrived at the scene</Incident.context>
+            <Incident.patientID id="RT371"/>
             <Incident.encryptionModule>
                 <EncryptionModule>
                     <EncryptionModule.key encryptionKey ="DXR895"/>
@@ -22,6 +23,7 @@
             <Incident.date>23/10/2021</Incident.date>
             <Incident.timeOfArrival>22:21</Incident.timeOfArrival>
             <Incident.context>Woman trapped in her car after the other driver collided with her car while not having right of way</Incident.context>
+            <Incident.patientID id="ME478"/>
             <Incident.encryptionModule>
                 <EncryptionModule>
                     <EncryptionModule.key encryptionKey ="CUE674"/>
@@ -35,6 +37,7 @@
             <Incident.date>05/12/2023</Incident.date>
             <Incident.timeOfArrival>10:09</Incident.timeOfArrival>
             <Incident.context>Old woman injured after burglary</Incident.context>
+            <Incident.patientID id="KE303"/>
             <Incident.encryptionModule>
                 <EncryptionModule>
                     <EncryptionModule.key encryptionKey ="KDT936"/>
