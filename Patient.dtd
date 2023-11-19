@@ -7,6 +7,7 @@
 <!ATTLIST Patient bloodType CDATA #REQUIRED>
 <!ATTLIST Patient gender NMTOKEN #REQUIRED>
 <!ATTLIST Patient ppsn NMTOKEN #REQUIRED>
+<!ATTLIST Patient id NMTOKEN #REQUIRED>
 <!ELEMENT Patient.dob (#PCDATA)>
 <!ELEMENT Patient.name (#PCDATA)>
 <!ELEMENT Patient.PatientStatus (PatientStatus)>
