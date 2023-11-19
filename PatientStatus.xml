@@ -5,7 +5,7 @@
 <PatientStatuses>
 
     <PatientStatus alive="true" unconscious="false">
-        <PatientStatus.patient id = "WK385"></PatientStatus.patient>
+        <PatientStatus.patient id = "WK385"/>
         <PatientStatus.injuries>
             <data>Severe fracture to right leg</data>
             <data>Bruising on torso</data>
@@ -17,7 +17,7 @@
     </PatientStatus>
     
     <PatientStatus alive="true" unconscious="false">
-        <PatientStatus.patient id="WK001"></PatientStatus.patient>
+        <PatientStatus.patient id="WK001"/>
         <PatientStatus.injuries>
             <data>Compound fracture in left arm</data>
             <data>Facial lacerations</data>
@@ -29,7 +29,7 @@
     </PatientStatus>
     
     <PatientStatus alive="true" unconscious="false">
-        <PatientStatus.patient id="CE836"></PatientStatus.patient>
+        <PatientStatus.patient id="CE836"/>
         <PatientStatus.injuries>
             <data>Smoke inhalation</data>
             <data>Second-degree burns on hands</data>
@@ -41,7 +41,7 @@
     </PatientStatus>
 
     <PatientStatus alive="true" unconscious="false">
-        <PatientStatus.patient id="WK003"></PatientStatus.patient>
+        <PatientStatus.patient id="WK003"/>
         <PatientStatus.injuries>
             <data>Spinal injury</data>
             <data>Broken collarbone</data>
@@ -53,7 +53,7 @@
     </PatientStatus>
 
     <PatientStatus alive="true" unconscious="false">
-        <PatientStatus.patient id="WK004"></PatientStatus.patient>
+        <PatientStatus.patient id="WK004"/>
         <PatientStatus.injuries>
             <data>Allergic reaction</data>
             <data>Dislocated shoulder</data>
