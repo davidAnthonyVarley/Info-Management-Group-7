@@ -2,72 +2,212 @@
 
 <!DOCTYPE Patient SYSTEM "Patient.dtd"> 
 <Patients>
+
+<!-- declaring the patient's bloodtype, biological gender (for potential surgeries).
+     ppsn and patient id in the IRC database -->
 <Patient bloodType = "0+" gender = "F" ppsn = "1234UJ" id="WK385">
+
+    <!-- the patient's date of birth, as DD/MM/YYYY -->
     <Patient.dob>13/03/1984</Patient.dob>
+    
+    <!-- the patient's full name -->
     <Patient.name>Mary Murphy</Patient.name>
+    
+    <!--  the medical status of this particular patient -->
     <Patient.PatientStatus>
+        
+        <!-- whether the patient is dead/alive, 
+          "       "     "     " conscious/unconscious -->
         <PatientStatus alive="true" unconscious="false">
+        
+            <!-- the patient's ID in the IRC database -->
             <PatientStatus.patient id = "WK385"/>
+            
+            <!-- the reference to the array of the patient's injuries -->
             <PatientStatus.injuries>
+            
+                <!-- an individual element in the array of patient injuries, ie, one of the patient's injuries -->
                 <data>Severe fracture to right leg</data>
+                
+                <!--another one of the patient's injuries -->
                 <data>Bruising on torso</data>
+                   
             </PatientStatus.injuries>
-            <PatientStatus.heartRate bpm = "70"/>
-            <PatientStatus.bloodPressureSystolic mmHg = "118"/>
-            <PatientStatus.bloodPressureDiastolic mmHg = "75"/>
-            <PatientStatus.arrivedAtHospital arrived = "no"/>
+   
+        <!-- the patient's heartrate in beats per minute (BPM) -->
+        <PatientStatus.heartRate bpm = "70"/>
+        
+        <!-- the pressure in the patient's arteries when their heart contracts -->
+        <PatientStatus.bloodPressureSystolic mmHg = "118"/>
+        
+        <!-- the pressure in the patient's arteries when their heart relaxes -->
+        <PatientStatus.bloodPressureDiastolic mmHg = "75"/>
+        
+        <!--  if the patient has arrived at the hospital yet -
+              if they haven't arrived, they are still the
+              IRC's responsibility -->
+        <PatientStatus.arrivedAtHospital arrived = "false"/>
+                   
         </PatientStatus>
     </Patient.PatientStatus>
+    
+    
+    
+    <!-- the patient's medical history -->
     <Patient.MedicalHistory>
         <MedicalHistory>
+        
+            <!-- patient's id in the IRC database -->
             <MedicalHistory.patient id="WK385"></MedicalHistory.patient>
+            
+            <!-- the patient's medical directives array reference -->
             <MedicalHistory.medicalDirectives>
+            
+                <!-- the patient's medical directives as an array element,
+                      with the category of directive as an attribute,
+                      and the content itself in the element, -->
                 <data name = "dnr">Yes</data>
+                
+                <!-- another medical directive, also stored as an array element -->
                 <data name = "note">Empty</data>
+                
+                
             </MedicalHistory.medicalDirectives>
+            
+             <!-- the patient's health insurance details,  array reference-->
             <MedicalHistory.insuranceContactInfo>
+            
+                <!-- the patient's health insurance as an array element,
+                      with the category of info as an attribute,
+                      and the content itself in the element, -->
                 <data name = "InsuranceProvider">Alliance</data>
+                
+                <!-- one more detail from the patient's health
+                      insurance info -->
                 <data name = "InsurancePlanValid">Premium</data>
+                
+                
             </MedicalHistory.insuranceContactInfo>
+            
+            <!-- the patient's existing medical conditions, as an array reference-->
             <MedicalHistory.existingConditions>
+            
+                 <!-- the patient's health insurance as an array element,
+                      with the category of info as an attribute,
+                      and the content itself in the element -->
                 <data type = "congenital">Brain Injury</data>
+                
+                <!-- one more existing condition, stored as an array element -->
                 <data type = "injury">Concussion</data>  
+                
+                
             </MedicalHistory.existingConditions>
+            
+            
         </MedicalHistory>
+        
+        
     </Patient.MedicalHistory>
+    
+    
+     <!-- the static reference to the HSE database -->
     <Patient.HSEDataBase>
         <HSEDataBase>
+        
+        <!-- this is simply an arraylist of medical histories just like the one
+              above
+              
+              the same format, but varying content (for different patients),
+              as this patient's medical history, like just up above.  -->
             <HSEDatabase.medicalHistoryOfPatients type = "arrayList">
+            
+            
                 <medicalHistoryOfPatients.MedicalHistory id = "EN389562">
+                
+                
                     <MedicalHistory>
+                    
+                    
                         <MedicalHistory.patient id = "HS293"/>
+                        
+                        
                         <MedicalHistory.medicalDirectives>
+                        
+                        
                             <data name = "dnr">Yes</data>
+                            
+                            
                             <data name = "note">Empty</data>
+                            
+                            
                         </MedicalHistory.medicalDirectives>
+                            
+                            
                         <MedicalHistory.insuranceContactInfo>
+                            
+                            
                             <data name = "InsuranceProvider">Alliance</data>
+                            
+                            
                             <data name = "InsurancePlanValid">Premium</data>
+                            
+                            
                         </MedicalHistory.insuranceContactInfo>
+                            
+                            
                         <MedicalHistory.existingConditions>
+                            
+                            
                             <data type = "congenital">Brain Injury</data>
+                            
+                            
                             <data type = "injury">Concussion</data>  
+                            
+                            
                         </MedicalHistory.existingConditions>
+                            
+                            
                     </MedicalHistory>
+                            
+                            
                     <MedicalHistory>
                         <MedicalHistory.patient id="DK139"/>
+                        
+                        
                         <MedicalHistory.medicalDirectives>
+                            
+                            
                             <data name="dnr">Yes</data>
+                            
+                            
                             <data name="note">Empty</data>
+                            
+                            
                         </MedicalHistory.medicalDirectives>
+                            
+                            
                         <MedicalHistory.insuranceContactInfo>
+                            
+                            
                             <data name="InsuranceProvider">Alliance</data>
+                            
+                            
                             <data name="InsurancePlanValid">Premium</data>
+                            
+                            
                         </MedicalHistory.insuranceContactInfo>
+                            
+                            
                         <MedicalHistory.existingConditions>
+                            
+                            
                             <data type="disease">Diabetes</data>
+                            
+                            
                         </MedicalHistory.existingConditions>
                     </MedicalHistory>
+                            
+                            
                     <MedicalHistory>
                         <MedicalHistory.patient id="XG823"/>
                         <MedicalHistory.medicalDirectives>
@@ -84,16 +224,31 @@
                         </MedicalHistory>
                 </medicalHistoryOfPatients.MedicalHistory>
             </HSEDatabase.medicalHistoryOfPatients>
-            <HSEDatabase.encryptionModule>
+                            
+                            
+            <!-- the encryption toolset of the HSE's database  -->              
+            <HSEDatabase.encryptionModule>                   
                 <EncryptionModule>
+                            
+                    <!-- the key element which holds the encryption key in its attribute  -->        
                     <EncryptionModule.key encryptionKey ="CUE674"/>
+                            
+                     <!-- a reference to find where the data is stored in the system  -->       
                     <EncryptionModule.dataToEncrypt referenceToData = "EN389562"/>
+                            
+                            
                 </EncryptionModule>
-                </HSEDatabase.encryptionModule>
+             </HSEDatabase.encryptionModule>
+                
         </HSEDataBase>
     </Patient.HSEDataBase>
-</Patient>
     
+</Patient>
+
+
+
+
+ <!-- more instances of patient in the same format as above-->
 <Patient bloodType="A+" gender="M" ppsn="5678LK" id="KO574">
     <Patient.dob>02/07/1990</Patient.dob>
     <Patient.name>John Doe</Patient.name>
@@ -107,6 +262,7 @@
             <PatientStatus.heartRate bpm="72"/>
             <PatientStatus.bloodPressureSystolic mmHg="120"/>
             <PatientStatus.bloodPressureDiastolic mmHg="80"/>
+            <PatientStatus.arrivedAtHospital arrived = "true"/>
         </PatientStatus>
     </Patient.PatientStatus>
     <Patient.MedicalHistory>
@@ -198,6 +354,7 @@
             <PatientStatus.heartRate bpm="60"/>
             <PatientStatus.bloodPressureSystolic mmHg="110"/>
             <PatientStatus.bloodPressureDiastolic mmHg="70"/>
+            <PatientStatus.arrivedAtHospital arrived = "false"/>
         </PatientStatus>
     </Patient.PatientStatus>
     <Patient.MedicalHistory>
@@ -274,4 +431,5 @@
         </HSEDataBase>
     </Patient.HSEDataBase>
 </Patient>
+
 </Patients> 
