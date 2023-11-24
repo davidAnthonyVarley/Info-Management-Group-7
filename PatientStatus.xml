@@ -4,16 +4,38 @@
 
 <PatientStatuses>
 
+    <!-- whether the patient is dead/alive, 
+          "       "     "     " conscious/unconscious -->
     <PatientStatus alive="true" unconscious="false">
+    
+         <!-- the patient's ID in the IRC database -->
         <PatientStatus.patient id = "WK385"/>
+        
+        <!-- the reference to the array of the patient's injuries -->
         <PatientStatus.injuries>
+        
+            <!-- an individual element in the array of patient injuries, ie, one of the patient's injuries -->
             <data>Severe fracture to right leg</data>
+            
+            <!--another one of the patient's injuries -->
             <data>Bruising on torso</data>
+            
         </PatientStatus.injuries>
+        
+        <!-- the patient's heartrate in BPM (beats per minute) -->
         <PatientStatus.heartRate bpm = "70"/>
+        
+        <!-- the pressure in the patient's arteries when their heart contracts -->
         <PatientStatus.bloodPressureSystolic mmHg = "118"/>
+        
+        <!-- the pressure in the patient's arteries when their heart relaxes -->
         <PatientStatus.bloodPressureDiastolic mmHg = "75"/>
-        <PatientStatus.arrivedAtHospital arrived = "no"/>
+        
+        <!--  if the patient has arrived at the hospital yet -
+              if they haven't arrived, they are still the
+              IRC's responsibility -->
+        <PatientStatus.arrivedAtHospital arrived = "false"/>
+        
     </PatientStatus>
     
     <PatientStatus alive="true" unconscious="false">
@@ -25,7 +47,7 @@
         <PatientStatus.heartRate bpm="65"/>
         <PatientStatus.bloodPressureSystolic mmHg="120"/>
         <PatientStatus.bloodPressureDiastolic mmHg="80"/>
-        <PatientStatus.arrivedAtHospital arrived = "no"/>
+        <PatientStatus.arrivedAtHospital arrived = "false"/>
     </PatientStatus>
     
     <PatientStatus alive="true" unconscious="false">
@@ -37,7 +59,7 @@
         <PatientStatus.heartRate bpm="90"/>
         <PatientStatus.bloodPressureSystolic mmHg="110"/>
         <PatientStatus.bloodPressureDiastolic mmHg="70"/>
-        <PatientStatus.arrivedAtHospital arrived = "yes"/>
+        <PatientStatus.arrivedAtHospital arrived = "true"/>
     </PatientStatus>
 
     <PatientStatus alive="true" unconscious="false">
@@ -49,7 +71,7 @@
         <PatientStatus.heartRate bpm="75"/>
         <PatientStatus.bloodPressureSystolic mmHg="130"/>
         <PatientStatus.bloodPressureDiastolic mmHg="85"/>
-        <PatientStatus.arrivedAtHospital arrived = "no"/>
+        <PatientStatus.arrivedAtHospital arrived = "true"/>
     </PatientStatus>
 
     <PatientStatus alive="true" unconscious="false">
@@ -61,7 +83,7 @@
         <PatientStatus.heartRate bpm="80"/>
         <PatientStatus.bloodPressureSystolic mmHg="115"/>
         <PatientStatus.bloodPressureDiastolic mmHg="75"/>
-        <PatientStatus.arrivedAtHospital arrived = "yes"/>
+        <PatientStatus.arrivedAtHospital arrived = "true"/>
     </PatientStatus>
      
 </PatientStatuses>
