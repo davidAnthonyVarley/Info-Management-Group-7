@@ -24,47 +24,47 @@
         IRC's responsibility-->
     PatientStatus.arrivedAtHospital)>
 
-         <!-- whether the patient is alive or not -->
-        <!ATTLIST PatientStatus alive (true | false) #IMPLIED>
-
-         <!-- whether the patient is unconscious or not -->
-        <!ATTLIST PatientStatus unconscious (true | false) #REQUIRED>
-
-
-        <!ELEMENT PatientStatus.patient EMPTY>
-
-         <!-- the patient's id in the database -->
-        <!ATTLIST PatientStatus.patient id ID #REQUIRED>
-
-         <!-- the reference to the array of injuries that the patient sustained  -->
-        <!ELEMENT PatientStatus.injuries (data+)>
-
-         <!-- the individual injuries that the patient sustained, as elements in an array  -->
-        <!ELEMENT data (#PCDATA)>
-
-         <!-- the patient's heartrate as an empty element  -->
-        <!ELEMENT PatientStatus.heartRate EMPTY>
-
-         <!-- the patient's heartrate in beats per minute, in attribute form -->
-        <!ATTLIST PatientStatus.heartRate bpm NMTOKEN #REQUIRED>
-
-        <!-- the pressure in your arteries when your heart contracts, as an empty element -->
-        <!ELEMENT PatientStatus.bloodPressureSystolic EMPTY>
-
-        <!-- the pressure in your arteries when your heart contracts, as an attribute -->
-        <!ATTLIST PatientStatus.bloodPressureSystolic mmHg NMTOKEN #REQUIRED>
-
-        <!-- the pressure in your arteries when your heart relaxes, as an empty element -->
-        <!ELEMENT PatientStatus.bloodPressureDiastolic EMPTY>
-
-        <!-- the pressure in your arteries when your heart relaxes, as an attribute -->
-        <!ATTLIST PatientStatus.bloodPressureDiastolic mmHg NMTOKEN #REQUIRED>
-
-        <!-- if the patient has arrived at the hospital yet, as an empty element  -->
-        <!ELEMENT PatientStatus.arrivedAtHospital EMPTY>
-
-        <!-- if the patient has arrived at the hospital yet, as an attribute  -->
-        <!ATTLIST PatientStatus.arrivedAtHospital arrived (true | false) #REQUIRED>
+       <!-- whether the patient is alive or not -->
+      <!ATTLIST PatientStatus alive (true | false) #IMPLIED>
+  
+       <!-- whether the patient is unconscious or not -->
+      <!ATTLIST PatientStatus unconscious (true | false) #REQUIRED>
+  
+      <!-- a reference to the patient themselves -->
+      <!ELEMENT PatientStatus.patient EMPTY>
+  
+       <!-- the patient's id in the database -->
+      <!ATTLIST PatientStatus.patient id ID #REQUIRED>
+  
+       <!-- the reference to the array of injuries that the patient sustained  -->
+      <!ELEMENT PatientStatus.injuries (data+)>
+  
+       <!-- the individual injuries that the patient sustained, as elements in an array  -->
+      <!ELEMENT data (#PCDATA)>
+  
+       <!-- the patient's heartrate as an empty element  -->
+      <!ELEMENT PatientStatus.heartRate EMPTY>
+  
+       <!-- the patient's heartrate in beats per minute, in attribute form -->
+      <!ATTLIST PatientStatus.heartRate bpm NMTOKEN #REQUIRED>
+  
+      <!-- the pressure in your arteries when your heart contracts, as an empty element -->
+      <!ELEMENT PatientStatus.bloodPressureSystolic EMPTY>
+  
+      <!-- the pressure in your arteries when your heart contracts, as an attribute -->
+      <!ATTLIST PatientStatus.bloodPressureSystolic mmHg NMTOKEN #REQUIRED>
+  
+      <!-- the pressure in your arteries when your heart relaxes, as an empty element -->
+      <!ELEMENT PatientStatus.bloodPressureDiastolic EMPTY>
+  
+      <!-- the pressure in your arteries when your heart relaxes, as an attribute -->
+      <!ATTLIST PatientStatus.bloodPressureDiastolic mmHg NMTOKEN #REQUIRED>
+  
+      <!-- if the patient has arrived at the hospital yet, as an empty element  -->
+      <!ELEMENT PatientStatus.arrivedAtHospital EMPTY>
+  
+      <!-- if the patient has arrived at the hospital yet, as an attribute  -->
+      <!ATTLIST PatientStatus.arrivedAtHospital arrived (true | false) #REQUIRED>
 
 
 
