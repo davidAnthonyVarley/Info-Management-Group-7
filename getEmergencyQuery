@@ -1,0 +1,8 @@
+declare function local:print($inc as element(Incident)){
+ let $severity := $inc/Incident.category[@severity = "high" or @severity = "critical"]
+  return
+    $inc
+};
+
+for $x in doc("Police.xml")/Police/Police.policeDatabase/Incident
+return local:print($x)
