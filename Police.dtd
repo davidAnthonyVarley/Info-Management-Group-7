@@ -1,10 +1,20 @@
-<!ELEMENT Police (Police.policeStation,Police.policeDatabase,Police.encryptionModule)>
-<!ATTLIST Police id ID #REQUIRED>
-<!ELEMENT Police.policeStation (#PCDATA)>
-<!ELEMENT Police.policeDatabase (Incident+)>
-<!ATTLIST Police.policeDatabase type NMTOKEN #REQUIRED>
-<!ELEMENT Police.encryptionModule (EncryptionModule)>
+<!-- Purpose of the Document: Define the structure and constraints for managing police information, incidents, and encryption modules -->
 
+<!-- Defines the 'Police' element -->
+<!ELEMENT Police (Police.policeStation,Police.policeDatabase,Police.encryptionModule)>
+<!ATTLIST Police id ID #REQUIRED> <!-- Attribute: Unique identifier for a police entity -->
+
+<!-- Element for police station information -->
+<!ELEMENT Police.policeStation (#PCDATA)> <!-- Text content: Represents details about the police station -->
+
+<!-- Element for the police database -->
+<!ELEMENT Police.policeDatabase (Incident+)> <!-- Contains one or more 'Incident' elements -->
+<!ATTLIST Police.policeDatabase type NMTOKEN #REQUIRED> <!-- Attribute: Specifies the type of police database -->
+
+<!-- Element for encryption module used by the police -->
+<!ELEMENT Police.encryptionModule (EncryptionModule)> <!-- Contains an 'EncryptionModule' element -->
+
+<!-- Element for describing an incident -->
 <!ELEMENT Incident (
   Incident.category,
   Incident.location,
@@ -15,26 +25,48 @@
   Incident.encryptionModule
 )>
 <!ATTLIST Incident 
-  id ID #REQUIRED
-  reportToPolice (True | False) "False">
-<!ELEMENT Incident.category EMPTY>
-<!ATTLIST Incident.category
-  severity (low | moderate | high | critical) #REQUIRED>
-<!ELEMENT Incident.location (#PCDATA)>
-<!ELEMENT Incident.date (#PCDATA)>
-<!ELEMENT Incident.timeOfArrival (#PCDATA)>
-<!ELEMENT Incident.context (#PCDATA)>
-<!ELEMENT Incident.patientID EMPTY>
-<!ATTLIST Incident.patientID id NMTOKEN #REQUIRED>
-<!ELEMENT Incident.encryptionModule  (EncryptionModule)>
+  id ID #REQUIRED <!-- Attribute: Unique identifier for an incident -->
+  reportToPolice (True | False) "False"> <!-- Attribute: Indicates whether the incident has been reported to the police -->
 
+<!-- Element for categorizing the incident -->
+<!ELEMENT Incident.category EMPTY> <!-- Empty element: Represents the severity category of the incident -->
+<!ATTLIST Incident.category
+  severity (low | moderate | high | critical) #REQUIRED> <!-- Attribute: Indicates severity level -->
+
+<!-- Element for incident location -->
+<!ELEMENT Incident.location (#PCDATA)> <!-- Text content: Contains details about the incident location -->
+
+<!-- Element for incident date -->
+<!ELEMENT Incident.date (#PCDATA)> <!-- Text content: Represents the date of the incident -->
+
+<!-- Element for time of arrival related to the incident -->
+<!ELEMENT Incident.timeOfArrival (#PCDATA)> <!-- Text content: Represents the time of arrival related to the incident -->
+
+<!-- Element for incident context/description -->
+<!ELEMENT Incident.context (#PCDATA)> <!-- Text content: Describes the context or details of the incident -->
+
+<!-- Element for identifying the patient involved in the incident -->
+<!ELEMENT Incident.patientID EMPTY> <!-- Empty element: Represents the ID of the involved patient -->
+<!ATTLIST Incident.patientID id NMTOKEN #REQUIRED> <!-- Attribute: Unique identifier for the patient -->
+
+<!-- Element for the encryption module used within an incident -->
+<!ELEMENT Incident.encryptionModule  (EncryptionModule)> <!-- Contains an 'EncryptionModule' element -->
+
+<!-- Element for the encryption module -->
 <!ELEMENT EncryptionModule (EncryptionModule.key, EncryptionModule.dataToEncrypt)>
-<!ELEMENT EncryptionModule.key EMPTY>
-<!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
+<!-- Contains elements for encryption key and data to be encrypted -->
+
+<!-- Element for encryption key -->
+<!ELEMENT EncryptionModule.key EMPTY> <!-- Empty element: Represents the encryption key -->
 <!ATTLIST EncryptionModule.key 
-	encryptionKey ID #REQUIRED>
+	encryptionKey ID #REQUIRED> <!-- Attribute: Unique identifier for the encryption key -->
+
+<!-- Element for data to be encrypted -->
+<!ELEMENT EncryptionModule.dataToEncrypt EMPTY> <!-- Empty element: Represents data to be encrypted -->
 <!ATTLIST EncryptionModule.dataToEncrypt
-  referenceToData IDREF #IMPLIED>
+  referenceToData IDREF #IMPLIED> <!-- Attribute: Reference to the data to be encrypted -->
+
+<!-- Comments are used to explain the purpose of each element, attribute, and the reason for using certain cardinalities (e.g., EMPTY, #PCDATA, ID, IDREF) within the DTD. -->
 
 
 
