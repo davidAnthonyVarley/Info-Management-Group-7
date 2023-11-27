@@ -1,22 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Police SYSTEM 'Police.dtd'>
+
+<!--
+    This XML document represents a police record system containing information about various incidents.
+-->
+
 <Police id="HJ357928">
+
+    <!-- Represents a police record that includes information about incidents and encryption details. -->
     <Police.policeStation>Pearse Street Garda Station</Police.policeStation>
+
+    <!-- Represents a database of police incidents. -->
     <Police.policeDatabase type="arrayList"> 
-        <Incident id = "VF766543" reportToPolice="True">
-            <Incident.category severity ="high"/>
+
+        <!-- Represents a specific incident within the police database. -->
+        <Incident id="VF766543" reportToPolice="True">
+
+            <!-- Indicates the severity category of the incident (e.g., high, moderate, critical). -->
+            <Incident.category severity="high"/>
+
+            <!-- Provides the geographical coordinates of the incident location. -->
             <Incident.location>53.34271896364257, -6.243167360380834</Incident.location>
+
+            <!-- Specifies the date when the incident occurred. -->
             <Incident.date>16/06/2022</Incident.date>
+
+            <!-- Indicates the time of arrival of the police at the incident scene. -->
             <Incident.timeOfArrival>15:38</Incident.timeOfArrival>
+
+            <!-- Describes the context or details of the incident. -->
             <Incident.context>Man found on the floor with stabbing wounds, second man running away when FR arrived at the scene</Incident.context>
+
+            <!-- Specifies the patient ID associated with the incident. -->
             <Incident.patientID id="RT371"/>
+
+            <!-- Represents the encryption details for the incident data. -->
             <Incident.encryptionModule>
+
+                <!-- Contains encryption key and reference to the data to be encrypted. -->
                 <EncryptionModule>
-                    <EncryptionModule.key encryptionKey ="DXR895"/>
-                    <EncryptionModule.dataToEncrypt referenceToData = "VF766543"/>
+
+                    <!-- Specifies the encryption key for the incident data. -->
+                    <EncryptionModule.key encryptionKey="DXR895"/>
+
+                    <!-- Specifies a reference to the incident data that needs to be encrypted. -->
+                    <EncryptionModule.dataToEncrypt referenceToData="VF766543"/>
+
                 </EncryptionModule>
+
             </Incident.encryptionModule>
         </Incident>
+
         <Incident id = "RX437529" reportToPolice="True">
             <Incident.category severity ="critical"/>
             <Incident.location>53.34800212335733, -6.246082940909553</Incident.location>
@@ -46,10 +80,20 @@
             </Incident.encryptionModule>
         </Incident>
     </Police.policeDatabase>
+    
+    <!-- Represents the encryption details for the entire police record. -->
     <Police.encryptionModule>
+
+        <!-- Contains encryption key and reference to the data to be encrypted. -->
         <EncryptionModule>
-            <EncryptionModule.key encryptionKey ="GFD756"/>
-            <EncryptionModule.dataToEncrypt referenceToData = "HJ357928"/>
+
+            <!-- Specifies the encryption key for the entire police record. -->
+            <EncryptionModule.key encryptionKey="GFD756"/>
+
+            <!-- Specifies a reference to the police record data that needs to be encrypted. -->
+            <EncryptionModule.dataToEncrypt referenceToData="HJ357928"/>
+
         </EncryptionModule>
+
     </Police.encryptionModule>
 </Police>
