@@ -1,16 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose of the Document: Represents location data with encryption information -->
+
+<!-- Document Type Definition (DTD) -->
 <!DOCTYPE Locations SYSTEM "Locations.dtd">
+
+<!-- Root Element: Represents a collection of locations -->
 <Locations>
+
+  <!-- Location Element: Represents information about a specific location -->
   <Location id="HP947201">
+
+    <!-- Current Location Element: Represents the current geographical coordinates -->
     <Location.currentLocation>52.478253,-6.983627</Location.currentLocation>
+
+    <!-- Hospital Location Element: Represents the hospital's geographical coordinates -->
     <Location.hospitalLocation>53.453628,-7.376547</Location.hospitalLocation>
+
+    <!-- Time Until Destination Element: Represents time until destination in minutes -->
     <Location.timeUntilDestMins>19</Location.timeUntilDestMins>
+
+    <!-- Distance to Destination Element: Represents distance to destination in kilometers -->
     <Location.distToDestKms>24</Location.distToDestKms>
+
+    <!-- Traffic Level Element: Represents the traffic level (low, average, high) -->
     <Location.trafficLevel level="low"/>
+
+    <!-- Encryption Module Element: Represents encryption information for the location -->
     <EncryptionModule>
+
+      <!-- Encryption Key Attribute: Represents the encryption key for the location -->
       <EncryptionModule.key encryptionKey="XIZ624"/>
+
+      <!-- Data to Encrypt Attribute: Represents a reference to the data to be encrypted -->
       <EncryptionModule.dataToEncrypt referenceToData="HP947201"/>
+
     </EncryptionModule>
+
   </Location>
   <Location id="AE472682">
     <Location.currentLocation>53.16528,-7.237383</Location.currentLocation>
