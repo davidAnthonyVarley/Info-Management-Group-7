@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- DTD for defining the structure of XML documents related to locations, including encryption modules -->
+
 <!ELEMENT Locations (Location+)>
+<!-- Element 'Locations' contains one or more 'Location' elements -->
+
 <!ATTLIST Location 
     id ID #REQUIRED>
+<!-- Attribute 'id' for uniquely identifying a location -->
+
 <!ELEMENT Location (
   Location.currentLocation, 
   Location.hospitalLocation, 
@@ -11,18 +17,38 @@
   Location.trafficLevel,
   EncryptionModule
 )>
+<!-- Element 'Location' with sub-elements for various location details and an encryption module -->
+
 <!ELEMENT Location.currentLocation (#PCDATA)>
+<!-- Text content: Represents the current location -->
+
 <!ELEMENT Location.hospitalLocation (#PCDATA)>
+<!-- Text content: Represents the hospital location -->
+
 <!ELEMENT Location.timeUntilDestMins (#PCDATA)>
+<!-- Text content: Represents the time until destination in minutes -->
+
 <!ELEMENT Location.distToDestKms (#PCDATA)>
+<!-- Text content: Represents the distance to the destination in kilometers -->
+
 <!ELEMENT Location.trafficLevel EMPTY>
+<!-- Empty element: Represents the traffic level at the location -->
 <!ATTLIST Location.trafficLevel
   level (low | average | high) #IMPLIED>
+<!-- Attribute 'level' indicating the traffic level, with optional values -->
 
 <!ELEMENT EncryptionModule (EncryptionModule.key, EncryptionModule.dataToEncrypt)>
+<!-- Element 'EncryptionModule' with sub-elements for encryption key and data to encrypt -->
+
 <!ELEMENT EncryptionModule.key EMPTY>
-<!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
+<!-- Empty element: Represents the encryption key -->
 <!ATTLIST EncryptionModule.key 
 	encryptionKey ID #REQUIRED>
+<!-- Attribute 'encryptionKey' for uniquely identifying the encryption key -->
+
+<!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
+<!-- Empty element: Represents data to be encrypted -->
 <!ATTLIST EncryptionModule.dataToEncrypt
   referenceToData IDREF #IMPLIED>
+<!-- Attribute 'referenceToData' for referencing the data to be encrypted -->
+
