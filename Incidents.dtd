@@ -1,21 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
 
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Purpose: This DTD document defines the structure for an XML document that captures information about incidents.
+-->
+
+<!-- Root Element: Contains a list of Incident elements. -->
 <!ELEMENT Incidents (Incident+)>
+<!-- Attributes of Incident Element: An identifier for the incident, it is required. Indicates whether the incident should be reported to the police, with a default value of "False". -->
 <!ATTLIST Incident 
-  id ID #REQUIRED
-  reportToPolice (True | False) "False">
+    id ID #REQUIRED
+    reportToPolice (True | False) "False">
+<!-- Incident Element: Represents a single incident with various details. -->
 <!ELEMENT Incident (
-  Incident.category,
-  Incident.location,
-  Incident.date,
-  Incident.timeOfArrival,
-  Incident.context,
-  Incident.patientID,
-  Incident.encryptionModule
+    Incident.category,
+    Incident.location,
+    Incident.date,
+    Incident.timeOfArrival,
+    Incident.context,
+    Incident.patientID,
+    Incident.encryptionModule
 )>
+<!-- Attributes of Incident.category Element: Specifies the severity of the incident (low, moderate, high, critical). -->
 <!ELEMENT Incident.category EMPTY>
 <!ATTLIST Incident.category
-  severity (low | moderate | high | critical) #REQUIRED>
+    severity (low | moderate | high | critical) #REQUIRED>
+<!-- Child Elements of Incident Element: Specifies the location of the incident. Represents the date of the incident. Indicates the time of arrival related to the incident. Provides additional context or details about the incident. Identifies the patient associated with the incident. Contains details related to encryption. -->
 <!ELEMENT Incident.location (#PCDATA)>
 <!ELEMENT Incident.date (#PCDATA)>
 <!ELEMENT Incident.timeOfArrival (#PCDATA)>
@@ -23,12 +32,13 @@
 <!ELEMENT Incident.patientID EMPTY>
 <!ATTLIST Incident.patientID id NMTOKEN #REQUIRED>
 <!ELEMENT Incident.encryptionModule  (EncryptionModule)>
-
-
+<!-- Child Elements of EncryptionModule Element: An identifier for the encryption key. Reference to the data to be encrypted. -->
 <!ELEMENT EncryptionModule (EncryptionModule.key, EncryptionModule.dataToEncrypt)>
 <!ELEMENT EncryptionModule.key EMPTY>
 <!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
+<!-- Attributes of EncryptionModule.key Element: An identifier for the encryption key, it is required. -->
 <!ATTLIST EncryptionModule.key 
-	encryptionKey ID #REQUIRED>
+    encryptionKey ID #REQUIRED>
+<!-- Attributes of EncryptionModule.dataToEncrypt Element: Reference to the data to be encrypted. -->
 <!ATTLIST EncryptionModule.dataToEncrypt
-  referenceToData IDREF #IMPLIED>
+    referenceToData IDREF #IMPLIED>
