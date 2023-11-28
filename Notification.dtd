@@ -1,10 +1,26 @@
+<!-- 
+    Purpose: This DTD document defines the structure for an XML document capturing emergency notifications.
+-->
 <!ELEMENT Notifications (Notification+)>
+
+<!-- Notification Element: Represents a single emergency notification. -->
 <!ELEMENT Notification (Notification.message, Notification.emergencyType, Notification.reporterLocation, Notification.reporterName, Notification.date, Notification.time)>
 
+<!-- Child Elements of Notification Element: Describes the nature of the emergency. Indicates the type of emergency. Provides the geographical location where the emergency was reported. Identifies the person who reported the emergency. Specifies the date when the emergency was reported. Specifies the time when the emergency was reported. -->
 <!ELEMENT Notification.message (#PCDATA)>
 <!ELEMENT Notification.emergencyType EMPTY>
+
+<!-- Attributes of Notification.emergencyType Element: A code representing the type of emergency. -->
 <!ATTLIST Notification.emergencyType code NMTOKEN #REQUIRED>
+
+<!-- Child Elements of Notification Element: Provides the geographical location where the emergency was reported. -->
 <!ELEMENT Notification.reporterLocation (#PCDATA)>
+
+<!-- Child Elements of Notification Element: Identifies the person who reported the emergency. -->
 <!ELEMENT Notification.reporterName (#PCDATA)>
+
+<!-- Child Elements of Notification Element: Specifies the date when the emergency was reported. -->
 <!ELEMENT Notification.date (#PCDATA)>
+
+<!-- Child Elements of Notification Element: Specifies the time when the emergency was reported. -->
 <!ELEMENT Notification.time (#PCDATA)>
