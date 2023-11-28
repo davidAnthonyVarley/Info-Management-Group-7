@@ -1,81 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Purpose of the Document: This XML document represents a collection of incident reports. 
+    Each incident includes details surrounding the patient such as location, date, severity, and context.
+-->
 <!DOCTYPE Incidents SYSTEM "Incidents.dtd">
 <Incidents>
+<!-- Incident 1: House Fire -->
   <Incident id="KD738304" reportToPolice="True">
+  <!-- Incident Category: Moderate Severity -->
     <Incident.category severity="moderate"/>
+      <!-- Location of the Incident -->
     <Incident.location>53.392143, -6.391097</Incident.location>
+     <!-- Date of the Incident -->
     <Incident.date>17/06/2023</Incident.date>
+     <!-- Time of Arrival at the Incident -->
     <Incident.timeOfArrival>16:37</Incident.timeOfArrival>
+     <!-- Context of the Incident -->
     <Incident.context>
       domestic house fire
       owner of house burned
       may have carbon monoxide poisoning
       suspicion of arson
     </Incident.context>
+     <!-- Patient ID associated with the Incident -->
     <Incident.patientID id="CE836"/>
+
+ <!-- Encryption Module Details for the Incident Data -->
     <Incident.encryptionModule>
       <EncryptionModule>
+      <!-- Encryption Key for the Incident -->
       <EncryptionModule.key encryptionKey="SFH947"/>
+       <!-- Reference to the Data to be Encrypted -->
       <EncryptionModule.dataToEncrypt referenceToData="KD738304"/>
     </EncryptionModule>
     </Incident.encryptionModule>
   </Incident>
 
+ <!-- Incident 2: Minor Traffic Accident -->
   <Incident id="FJ750684">
+   <!-- Incident Category: Low Severity -->
     <Incident.category severity="low"/>
+     <!-- Location of the Incident -->
     <Incident.location>53.335789, -6.278512</Incident.location>
+    <!-- Date of the Incident -->
     <Incident.date>15/08/2023</Incident.date>
+     <!-- Time of Arrival at the Incident -->
     <Incident.timeOfArrival>14:35</Incident.timeOfArrival>
+      <!-- Context of the Incident -->
     <Incident.context>
       minor traffic accident
       was an accident 
       no serious injuries
       minor injuries need treatment as they may get infected  
     </Incident.context>
+     <!-- Patient ID associated with the Incident -->
     <Incident.patientID id="NR206"/>
+       <!-- Encryption Module Details for the Incident Data -->
     <Incident.encryptionModule>
       <EncryptionModule>
+      <!-- Encryption Key for the Incident -->
       <EncryptionModule.key encryptionKey="LDG846"/>
+      <!-- Reference to the Data to be Encrypted -->
       <EncryptionModule.dataToEncrypt referenceToData="FJ750684"/>
     </EncryptionModule>
     </Incident.encryptionModule>
   </Incident>
 
+ <!-- Incident 3: Major Flooding -->
   <Incident id="DJ875954" reportToPolice="True">
+    <!-- Incident Category: Critical Severity -->
     <Incident.category severity="critical"/>
+     <!-- Location of the Incident -->
     <Incident.location>51.878748, -8.532065</Incident.location>
+      <!-- Date of the Incident -->
     <Incident.date>01/09/2023</Incident.date>
+     <!-- Time of Arrival at the Incident -->
     <Incident.timeOfArrival>12:07</Incident.timeOfArrival>
+         <!-- Context of the Incident -->
     <Incident.context>
       major flooding throughout town 
       multiple people injured and in danger
       police will carry out extraction
       our patient in critical condition 
     </Incident.context>
+    <!-- Patient ID associated with the Incident -->
     <Incident.patientID id="WK385"/>
+      <!-- Encryption Module Details for the Incident Data -->
     <Incident.encryptionModule>
       <EncryptionModule>
+          <!-- Encryption Key for the Incident -->
       <EncryptionModule.key encryptionKey="DFS541"/>
+       <!-- Reference to the Data to be Encrypted -->
       <EncryptionModule.dataToEncrypt referenceToData="DJ875954"/>
     </EncryptionModule>
     </Incident.encryptionModule>
+ </Incident>
 
-  </Incident>
+  <!-- Incident 4: Heart Attack -->
   <Incident id="JK029375">
+       <!-- Incident Category: High Severity -->
     <Incident.category severity="high"/>
+     <!-- Location of the Incident -->
     <Incident.location>51.999666, -9.744167</Incident.location>
+      <!-- Date of the Incident -->
     <Incident.date>19/09/2023</Incident.date>
+     <!-- Time of Arrival at the Incident -->
     <Incident.timeOfArrival>10:18</Incident.timeOfArrival>
+     <!-- Context of the Incident -->
     <Incident.context>
       patient had heart attack
       in need of aerial retreival 
       patient in critical conidition 
       need equipment only found in hospital 
     </Incident.context>
+    <!-- Patient ID associated with the Incident -->
     <Incident.patientID id="BD568"/>
+     <!-- Encryption Module Details for the Incident Data -->
     <Incident.encryptionModule>
       <EncryptionModule>
+      <!-- Encryption Key for the Incident -->
       <EncryptionModule.key encryptionKey="PDH409"/>
+       <!-- Reference to the Data to be Encrypted -->
       <EncryptionModule.dataToEncrypt referenceToData="JK029375"/>
     </EncryptionModule>
     </Incident.encryptionModule>
