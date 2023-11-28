@@ -1,30 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Purpose: This XML document captures notifications related to emergencies. It adheres to the structure defined in the 'Notification.dtd'.
+-->
 <!DOCTYPE Notifications SYSTEM 'Notification.dtd'>
 <Notifications>
+
+    <!-- Notification 1 -->
     <Notification>
+        <!-- Describes the nature of the emergency. -->
         <Notification.message>Allergic Reaction</Notification.message>
+        <!-- Indicates the type of emergency with a specific code. -->
         <Notification.emergencyType code="2D3"/>
+        <!-- Provides the geographical location where the emergency was reported. -->
         <Notification.reporterLocation>51.999666, -9.744167</Notification.reporterLocation>
+        <!-- Identifies the person who reported the emergency. -->
         <Notification.reporterName>John Doe</Notification.reporterName>
+        <!-- Specifies the date when the emergency was reported. -->
         <Notification.date>13/11/2023</Notification.date>
+        <!-- Specifies the time when the emergency was reported. -->
         <Notification.time>12:00</Notification.time>
     </Notification>
 
+    <!-- Notification 2 -->
     <Notification>
+        <!-- Describes the nature of the emergency. -->
         <Notification.message>Diabetic person fainted</Notification.message>
+        <!-- Indicates the type of emergency with a specific code. -->
         <Notification.emergencyType code="13D1"/>
+        <!-- Provides the geographical location where the emergency was reported. -->
         <Notification.reporterLocation>53.349317, -6.271131</Notification.reporterLocation>
+        <!-- Identifies the person who reported the emergency. -->
         <Notification.reporterName>Jane Smith</Notification.reporterName>
+        <!-- Specifies the date when the emergency was reported. -->
         <Notification.date>05/02/2023</Notification.date>
+        <!-- Specifies the time when the emergency was reported. -->
         <Notification.time>22:56</Notification.time>
     </Notification>
 
+    <!-- Notification 3 -->
     <Notification>
+        <!-- Describes the nature of the emergency. -->
         <Notification.message>Traffic collision</Notification.message>
+        <!-- Indicates the type of emergency with a specific code. -->
         <Notification.emergencyType code="29B1"/>
+        <!-- Provides the geographical location where the emergency was reported. -->
         <Notification.reporterLocation>53.335789, -6.278512</Notification.reporterLocation>
+        <!-- Identifies the person who reported the emergency. -->
         <Notification.reporterName>Bob Joe</Notification.reporterName>
+        <!-- Specifies the date when the emergency was reported. -->
         <Notification.date>15/08/2023</Notification.date>
+        <!-- Specifies the time when the emergency was reported. -->
         <Notification.time>14:20</Notification.time>
     </Notification>
+
 </Notifications>
