@@ -1,8 +1,12 @@
 declare function local:print($inc as element(Incident)){
- let $severity := $inc/Incident.category[@severity = "high" or @severity = "critical"]
-  return
-    $inc
-};
+ if ($inc/Incident.category/@severity = "high" or $inc/Incident.category/@severity = "critical")
+    then $inc
+    else ()
+  };
 
-for $x in doc("Police.xml")/Police/Police.policeDatabase/Incident
+for $x in doc("Incidents.xml")/Incidents/Incident
 return local:print($x)
+
+
+
+
