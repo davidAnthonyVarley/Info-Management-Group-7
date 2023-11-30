@@ -24,8 +24,10 @@
   Incident.patientID,
   Incident.encryptionModule
 )>
+
+ <!-- Attribute: Unique identifier for an incident -->
 <!ATTLIST Incident 
-  id ID #REQUIRED <!-- Attribute: Unique identifier for an incident -->
+  id ID #REQUIRED
   reportToPolice (True | False) "False"> <!-- Attribute: Indicates whether the incident has been reported to the police -->
 
 <!-- Element for categorizing the incident -->
