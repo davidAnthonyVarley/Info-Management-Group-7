@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
-<!DOCTYPE Patient SYSTEM "Patient.dtd"> 
+<!DOCTYPE Patients SYSTEM "Patient.dtd"> 
 <Patients>
 
 <!-- declaring the patient's bloodtype, biological gender (for potential surgeries).
@@ -369,7 +369,7 @@
                 <data name="InsurancePlanValid">Premium</data>
             </MedicalHistory.insuranceContactInfo>
             <MedicalHistory.existingConditions>
-                <data type="diseases">Asthma</data>
+                <data type="disease">Asthma</data>
             </MedicalHistory.existingConditions>
         </MedicalHistory>
     </Patient.MedicalHistory>
