@@ -1,214 +1,188 @@
+<!-- element patients contains one or more patient -->
+<!ELEMENT Patients (Patient+)>
+
 
 <!-- every patient will have these attributes -->
-<!ELEMENT Patient 
 
-    <!-- the patient's date of birth, as DD/MM/YYYY -->
-    (Patient.dob,
-    
-    <!-- the patient's full name -->
+<!-- the patient's date of birth, as DD/MM/YYYY -->
+<!-- the patient's full name -->
+<!-- the patient's medical status -->
+<!-- the patient's medical history -->
+<!-- a reference to the HSE database -->
+<!ELEMENT Patient (
+    Patient.dob,
     Patient.name,
-    
-    <!-- the patient's medical status -->
     Patient.PatientStatus,
-    
-    <!-- the patient's medical history -->
     Patient.MedicalHistory,
-    
-    <!-- a reference to the HSE database -->
-    Patient.HSEDataBase)>
-    
-    
-    
-    <!-- the patient's blood type -->
-    <!ATTLIST Patient bloodType CDATA #REQUIRED>
-    
-     <!-- the patient's biological gender (for potential surgeries) -->
-    <!ATTLIST Patient gender NMTOKEN #REQUIRED>
-    
-     <!-- the patient's ppsn -->
-    <!ATTLIST Patient ppsn NMTOKEN #REQUIRED>
-    
-     <!-- the patient's id in the IRC database -->
-    <!ATTLIST Patient id NMTOKEN #REQUIRED>
-    
-    <!-- the patient's date of birth, in DD/MM/YYYY -->
-    <!ELEMENT Patient.dob (#PCDATA)>
-    
-    <!-- the patient's full name -->
-    <!ELEMENT Patient.name (#PCDATA)>
-    
-    
-    
-    
-    
-    
-  <!--  the medical status of the current patient -->
-  <!ELEMENT Patient.PatientStatus (PatientStatus)>
+    Patient.HSEDataBase
+)>
 
-  <!-- every patient status consists of: -->
-  <!ELEMENT PatientStatus 
-    
-    <!-- a reference to the patient themselves -->
-    (PatientStatus.patient,
-    
-    <!-- the injuries the patient sustained during the incident -->
-    PatientStatus.injuries,
-    
-    <!-- the patient's heartrate -->
-    PatientStatus.heartRate,
-    
-    <!-- the pressure in your arteries when your heart contracts -->
-    PatientStatus.bloodPressureSystolic,
-    
-    <!-- the pressure in your arteries when your heart relaxes -->
-    PatientStatus.bloodPressureDiastolic,
-    
-    <!-- if the patient has arrived at the hospital yet -
+<!-- the patient's blood type -->
+<!ATTLIST Patient bloodType CDATA #REQUIRED>
+
+<!-- the patient's biological gender (for potential surgeries) -->
+<!ATTLIST Patient gender NMTOKEN #REQUIRED>
+
+<!-- the patient's ppsn -->
+<!ATTLIST Patient ppsn NMTOKEN #REQUIRED>
+
+<!-- the patient's id in the IRC database -->
+<!ATTLIST Patient id NMTOKEN #REQUIRED>
+
+<!-- the patient's date of birth, in DD/MM/YYYY -->
+<!ELEMENT Patient.dob (#PCDATA)>
+
+<!-- the patient's full name -->
+<!ELEMENT Patient.name (#PCDATA)>
+
+
+<!--  the medical status of the current patient -->
+<!ELEMENT Patient.PatientStatus (PatientStatus)>
+
+<!-- every patient status consists of: -->
+<!-- a reference to the patient themselves -->
+<!-- the injuries the patient sustained during the incident -->
+<!-- the patient's heartrate -->
+<!-- the pressure in your arteries when your heart contracts -->
+<!-- the pressure in your arteries when your heart relaxes -->
+<!-- if the patient has arrived at the hospital yet -
         if they haven't arrived, they are still the
         IRC's responsibility-->
-    PatientStatus.arrivedAtHospital)>
+<!ELEMENT PatientStatus (
+    PatientStatus.patient,
+    PatientStatus.injuries,
+    PatientStatus.heartRate,
+    PatientStatus.bloodPressureSystolic,
+    PatientStatus.bloodPressureDiastolic,
+    PatientStatus.arrivedAtHospital
+)>
 
 
-      <!-- empty patient which will have patient id attribute -->
-      <!ELEMENT PatientStatus.patient EMPTY>
-      
-       <!-- the patient id attribute, unique to the current patient in the IRC database -->
-      <!ATTLIST PatientStatus.patient id NMTOKEN #REQUIRED>
+<!-- empty patient which will have patient id attribute -->
+<!ELEMENT PatientStatus.patient EMPTY>
 
-       <!-- whether the patient is alive or not -->
-      <!ATTLIST PatientStatus alive (true | false) #IMPLIED>
-  
-       <!-- whether the patient is unconscious or not -->
-      <!ATTLIST PatientStatus unconscious (true | false) #REQUIRED>
-  
-       <!-- the patient's id in the database -->
-      <!ATTLIST PatientStatus.patient id ID #REQUIRED>
-  
-       <!-- the reference to the array of injuries that the patient sustained  -->
-      <!ELEMENT PatientStatus.injuries (data+)>
-  
-       <!-- the individual injuries that the patient sustained, as elements in an array  -->
-      <!ELEMENT data (#PCDATA)>
-      
-  
-       <!-- the patient's heartrate as an empty element  -->
-      <!ELEMENT PatientStatus.heartRate EMPTY>
-  
-       <!-- the patient's heartrate in beats per minute, in attribute form -->
-      <!ATTLIST PatientStatus.heartRate bpm NMTOKEN #REQUIRED>
-  
-      <!-- the pressure in your arteries when your heart contracts, as an empty element -->
-      <!ELEMENT PatientStatus.bloodPressureSystolic EMPTY>
-  
-      <!-- the pressure in your arteries when your heart contracts, as an attribute -->
-      <!ATTLIST PatientStatus.bloodPressureSystolic mmHg NMTOKEN #REQUIRED>
-      
-  
-      <!-- the pressure in your arteries when your heart relaxes, as an empty element -->
-      <!ELEMENT PatientStatus.bloodPressureDiastolic EMPTY>
-  
-      <!-- the pressure in your arteries when your heart relaxes, as an attribute -->
-      <!ATTLIST PatientStatus.bloodPressureDiastolic mmHg NMTOKEN #REQUIRED>
-      
-  
-      <!-- if the patient has arrived at the hospital yet, as an empty element  -->
-      <!ELEMENT PatientStatus.arrivedAtHospital EMPTY>
-  
-      <!-- if the patient has arrived at the hospital yet, as an attribute  -->
-      <!ATTLIST PatientStatus.arrivedAtHospital arrived (true | false) #REQUIRED>
-    
-    
-    
-    
-    <!-- the patient's medical history  -->
-    <!ELEMENT Patient.MedicalHistory (MedicalHistory)>
-    
-      <!ELEMENT MedicalHistory 
-      
-          <!-- the patient themselves  -->
-          (MedicalHistory.patient,
-          
-          <!-- the patient's medical directives, ie, DNR  -->
+<!-- the patient id attribute, unique to the current patient in the IRC database -->
+<!ATTLIST PatientStatus.patient id NMTOKEN #REQUIRED>
+
+<!-- whether the patient is alive or not -->
+<!ATTLIST PatientStatus alive (true | false) #IMPLIED>
+
+<!-- whether the patient is unconscious or not -->
+<!ATTLIST PatientStatus unconscious (true | false) #REQUIRED>
+
+<!-- the patient's id in the database -->
+<!ATTLIST PatientStatus.patient id ID #REQUIRED>
+
+<!-- the reference to the array of injuries that the patient sustained  -->
+<!ELEMENT PatientStatus.injuries (data+)>
+
+<!-- the individual injuries that the patient sustained, as elements in an array  -->
+<!ELEMENT data (#PCDATA)>
+
+
+<!-- the patient's heartrate as an empty element  -->
+<!ELEMENT PatientStatus.heartRate EMPTY>
+
+<!-- the patient's heartrate in beats per minute, in attribute form -->
+<!ATTLIST PatientStatus.heartRate bpm NMTOKEN #REQUIRED>
+
+<!-- the pressure in your arteries when your heart contracts, as an empty element -->
+<!ELEMENT PatientStatus.bloodPressureSystolic EMPTY>
+
+<!-- the pressure in your arteries when your heart contracts, as an attribute -->
+<!ATTLIST PatientStatus.bloodPressureSystolic mmHg NMTOKEN #REQUIRED>
+
+
+<!-- the pressure in your arteries when your heart relaxes, as an empty element -->
+<!ELEMENT PatientStatus.bloodPressureDiastolic EMPTY>
+
+<!-- the pressure in your arteries when your heart relaxes, as an attribute -->
+<!ATTLIST PatientStatus.bloodPressureDiastolic mmHg NMTOKEN #REQUIRED>
+
+
+<!-- if the patient has arrived at the hospital yet, as an empty element  -->
+<!ELEMENT PatientStatus.arrivedAtHospital EMPTY>
+
+<!-- if the patient has arrived at the hospital yet, as an attribute  -->
+<!ATTLIST PatientStatus.arrivedAtHospital arrived (true | false) #REQUIRED>
+
+
+<!-- the patient's medical history  -->
+<!ELEMENT Patient.MedicalHistory (MedicalHistory)>
+
+<!-- the patient themselves  -->
+<!-- the patient's medical directives, ie, DNR  -->
+<!-- the patient's health insurance details -->
+<!-- the patient's existing medical conditions  -->
+<!ELEMENT MedicalHistory (
+          MedicalHistory.patient,
           MedicalHistory.medicalDirectives,
-          
-          <!-- the patient's health insurance details -->
           MedicalHistory.insuranceContactInfo,
-          
-          <!-- the patient's existing medical conditions  -->
-          MedicalHistory.existingConditions)>
-          
-            <!-- the patient themselves  -->
-            <!ELEMENT MedicalHistory.patient EMPTY>
-            
-            <!-- the patient's id, as an attribute  -->
-            <!ATTLIST MedicalHistory.patient id NMTOKEN #REQUIRED>
-            
-            <!-- the patient's medical directives, ie, DNR  -->
-            <!ELEMENT MedicalHistory.medicalDirectives (data+)>
-            
-            <!-- the patient's health insurance details -->
-            <!ELEMENT MedicalHistory.insuranceContactInfo (data+)>
-            
-             <!-- the patient's existing medical conditions  -->
-            <!ELEMENT MedicalHistory.existingConditions (data+)>
-            
-            <!-- the disease, as a 'data' element, and an attribute
+          MedicalHistory.existingConditions
+)>
+
+<!-- the patient themselves  -->
+<!ELEMENT MedicalHistory.patient EMPTY>
+
+<!-- the patient's id, as an attribute  -->
+<!ATTLIST MedicalHistory.patient id NMTOKEN #REQUIRED>
+
+<!-- the patient's medical directives, ie, DNR  -->
+<!ELEMENT MedicalHistory.medicalDirectives (data+)>
+
+<!-- the patient's health insurance details -->
+<!ELEMENT MedicalHistory.insuranceContactInfo (data+)>
+
+<!-- the patient's existing medical conditions  -->
+<!ELEMENT MedicalHistory.existingConditions (data+)>
+
+<!-- the disease, as a 'data' element, and an attribute
                   specifing if what type of condition it is  -->
-            <!ATTLIST data type (disease|none|congenital|injury|surgery) #REQUIRED>
-      
-      
-    <!-- a reference to the HSE database, where some of the patient's medical info will be stored  -->
-    <!ELEMENT Patient.HSEDataBase (HSEDataBase)>
-    
-      <!ELEMENT HSEDataBase 
-      
-          <!-- where all patients' medical info is stored  -->
-          (HSEDatabase.medicalHistoryOfPatients,
-          
-          <!-- encryption module to encrypt/decrypt data as it is sent/received across networks  -->
-          HSEDatabase.encryptionModule)>
-          
-            <!-- where all patients' medical info is stored  -->
-            <!ELEMENT HSEDatabase.medicalHistoryOfPatients (medicalHistoryOfPatients.MedicalHistory)>
+<!ATTLIST data type (disease|none|congenital|injury|surgery) #IMPLIED>
+<!ATTLIST data name (dnr|note|InsuranceProvider|InsurancePlanValid) #IMPLIED>
+
+
+<!-- a reference to the HSE database, where some of the patient's medical info will be stored  -->
+<!ELEMENT Patient.HSEDataBase (HSEDataBase)>
+
+
+<!-- where all patients' medical info is stored  -->
+<!-- encryption module to encrypt/decrypt data as it is sent/received across networks  -->
+<!ELEMENT HSEDataBase (
+          HSEDatabase.medicalHistoryOfPatients,
+          HSEDatabase.encryptionModule
+)>
+
+<!-- where all patients' medical info is stored  -->
+<!ELEMENT HSEDatabase.medicalHistoryOfPatients (medicalHistoryOfPatients.MedicalHistory)>
+
+<!-- declares it is the root element, and thus reference, of an arraylist  -->
+<!ATTLIST HSEDatabase.medicalHistoryOfPatients type NMTOKEN #REQUIRED>
+
+<!-- an empty element which will link to the patient's med history  -->
+<!ELEMENT medicalHistoryOfPatients.MedicalHistory (MedicalHistory+)>
+
+<!-- the patient's ID referencing their info in the HSE database  -->
+<!ATTLIST medicalHistoryOfPatients.MedicalHistory id NMTOKEN #REQUIRED>
+
+<!-- encryption module to encrypt data as it is sent across networks  -->
+<!ELEMENT HSEDatabase.encryptionModule (EncryptionModule)>
+
+<!-- the key to unlock their data  -->
+<!ELEMENT EncryptionModule (
             
-            <!-- declares it is the root element, and thus reference, of an arraylist  -->
-            <!ATTLIST HSEDatabase.medicalHistoryOfPatients type NMTOKEN #REQUIRED>
-            
-            <!-- an empty element which will link to the patient's med history  -->
-            <!ELEMENT medicalHistoryOfPatients.MedicalHistory (MedicalHistory+)>
-            
-            <!-- the patient's ID referencing their info in the HSE database  -->
-            <!ATTLIST medicalHistoryOfPatients.MedicalHistory id NMTOKEN #REQUIRED>
-            
-            <!-- encryption module to encrypt data as it is sent across networks  -->
-            <!ELEMENT HSEDatabase.encryptionModule (EncryptionModule)>
-            
-            <!ELEMENT EncryptionModule 
-            
-                <!-- the key to unlock their data  -->
-                (EncryptionModule.key,
                 
-                <!-- the data to encrypt before it is sent off  -->
+                EncryptionModule.key,
                 EncryptionModule.dataToEncrypt)>
-                
-                  <!-- the empty key element which will hold the key in its attribute  -->
-                  <!ELEMENT EncryptionModule.key EMPTY>
-                  
-                  <!-- the attribute containing the key  -->
-                  <!ATTLIST EncryptionModule.key encryptionKey NMTOKEN #REQUIRED>
-                  
-                  <!-- the data to encrypt before it is sent off  -->
-                  <!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
-                  
-                  <!-- a reference to find where the data is stored in the system  -->
-                  <!ATTLIST EncryptionModule.dataToEncrypt referenceToData NMTOKEN #REQUIRED>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+<!-- the empty key element which will hold the key in its attribute  -->
+<!ELEMENT EncryptionModule.key EMPTY>
+
+<!-- the attribute containing the key  -->
+<!ATTLIST EncryptionModule.key encryptionKey NMTOKEN #REQUIRED>
+
+<!-- the data to encrypt before it is sent off  -->
+<!ELEMENT EncryptionModule.dataToEncrypt EMPTY>
+
+<!-- a reference to find where the data is stored in the system  -->
+<!ATTLIST EncryptionModule.dataToEncrypt referenceToData NMTOKEN #REQUIRED>
